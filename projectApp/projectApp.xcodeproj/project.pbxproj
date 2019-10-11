@@ -15,6 +15,7 @@
 		B86264DE235041A700DE3654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86264DC235041A700DE3654 /* LaunchScreen.storyboard */; };
 		B86264E9235041A700DE3654 /* projectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264E8235041A700DE3654 /* projectAppTests.swift */; };
 		B86264F4235041A700DE3654 /* projectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264F3235041A700DE3654 /* projectAppUITests.swift */; };
+		B86265022350427200DE3654 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86265012350427200DE3654 /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B86264EF235041A700DE3654 /* projectAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86264F3235041A700DE3654 /* projectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAppUITests.swift; sourceTree = "<group>"; };
 		B86264F5235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B86265012350427200DE3654 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B86264DA235041A700DE3654 /* Assets.xcassets */,
 				B86264DC235041A700DE3654 /* LaunchScreen.storyboard */,
 				B86264DF235041A700DE3654 /* Info.plist */,
+				B86265012350427200DE3654 /* LoginScreen.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86264D6235041A600DE3654 /* ViewController.swift in Sources */,
+				B86265022350427200DE3654 /* LoginScreen.swift in Sources */,
 				B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
 			);
