@@ -59,7 +59,19 @@ class LoginViewController: UIViewController {
         
         if (verified)
         {
-            // jump into the profile picture
+            // jump into the profile picture (or tab bar view controller page, with Profile Picture displayed on default
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            
+            guard let destination = mainStoryboard.instantiateViewController(withIdentifier: "tabBarViewController") as? TabBarViewController else {
+                print("Couldn't find the view controller")
+                return
+            }
+            
+            destination.modalTransitionStyle = .crossDissolve
+            destination.modalPresentationStyle = .fullScreen
+            
+            present(destination, animated: true, completion: nil)
+            
         }
         else
         {

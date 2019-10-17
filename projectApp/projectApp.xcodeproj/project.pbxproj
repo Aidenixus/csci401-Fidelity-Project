@@ -16,6 +16,7 @@
 		B86264E9235041A700DE3654 /* projectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264E8235041A700DE3654 /* projectAppTests.swift */; };
 		B86264F4235041A700DE3654 /* projectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264F3235041A700DE3654 /* projectAppUITests.swift */; };
 		B86265022350427200DE3654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86265012350427200DE3654 /* LoginViewController.swift */; };
+		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B86264F3235041A700DE3654 /* projectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAppUITests.swift; sourceTree = "<group>"; };
 		B86264F5235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86265012350427200DE3654 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B86264DC235041A700DE3654 /* LaunchScreen.storyboard */,
 				B86264DF235041A700DE3654 /* Info.plist */,
 				B86265012350427200DE3654 /* LoginViewController.swift */,
+				DF56513C23583F66006049E7 /* TabBarViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				B86264D6235041A600DE3654 /* ViewController.swift in Sources */,
 				B86265022350427200DE3654 /* LoginViewController.swift in Sources */,
 				B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */,
+				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
