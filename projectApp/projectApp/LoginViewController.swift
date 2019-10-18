@@ -18,7 +18,7 @@ class User {
     }
 }
 
-let dummyUser: User = User(username: "xubozhu@usc.edu", password: "123")
+let dummyUser: User = User(username: "tommy", password: "123")
 
 class LoginViewController: UIViewController {
 

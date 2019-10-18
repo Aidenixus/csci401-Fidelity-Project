@@ -10,12 +10,16 @@
 		B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D1235041A600DE3654 /* AppDelegate.swift */; };
 		B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D3235041A600DE3654 /* SceneDelegate.swift */; };
 		B86264D6235041A600DE3654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D5235041A600DE3654 /* ViewController.swift */; };
-		B86264D9235041A600DE3654 /* Minxuan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86264D7235041A600DE3654 /* Minxuan.storyboard */; };
 		B86264DB235041A700DE3654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86264DA235041A700DE3654 /* Assets.xcassets */; };
 		B86264DE235041A700DE3654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86264DC235041A700DE3654 /* LaunchScreen.storyboard */; };
 		B86264E9235041A700DE3654 /* projectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264E8235041A700DE3654 /* projectAppTests.swift */; };
 		B86264F4235041A700DE3654 /* projectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264F3235041A700DE3654 /* projectAppUITests.swift */; };
 		B86265022350427200DE3654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86265012350427200DE3654 /* LoginViewController.swift */; };
+		DC76EA3023597CE400F92066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA2E23597CE400F92066 /* Main.storyboard */; };
+		DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA312359830C00F92066 /* TommyTrojan.jpg */; };
+		DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA33235986DA00F92066 /* SettingPage.swift */; };
+		DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA34235986DA00F92066 /* ProfilePage.swift */; };
+		DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA35235986DA00F92066 /* StockDetailPage.swift */; };
 		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +45,6 @@
 		B86264D1235041A600DE3654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B86264D3235041A600DE3654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B86264D5235041A600DE3654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B86264D8235041A600DE3654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Minxuan.storyboard; sourceTree = "<group>"; };
 		B86264DA235041A700DE3654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B86264DD235041A700DE3654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86264DF235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +55,11 @@
 		B86264F3235041A700DE3654 /* projectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAppUITests.swift; sourceTree = "<group>"; };
 		B86264F5235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86265012350427200DE3654 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DC76EA2F23597CE400F92066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC76EA312359830C00F92066 /* TommyTrojan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TommyTrojan.jpg; path = Assets.xcassets/TommyTrojan.jpg; sourceTree = "<group>"; };
+		DC76EA33235986DA00F92066 /* SettingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/SettingPage.swift"; sourceTree = "<group>"; };
+		DC76EA34235986DA00F92066 /* ProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/ProfilePage.swift"; sourceTree = "<group>"; };
+		DC76EA35235986DA00F92066 /* StockDetailPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockDetailPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/StockDetailPage.swift"; sourceTree = "<group>"; };
 		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,11 +111,15 @@
 		B86264D0235041A600DE3654 /* projectApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC76EA2E23597CE400F92066 /* Main.storyboard */,
 				B86264D1235041A600DE3654 /* AppDelegate.swift */,
+				DC76EA34235986DA00F92066 /* ProfilePage.swift */,
+				DC76EA33235986DA00F92066 /* SettingPage.swift */,
+				DC76EA35235986DA00F92066 /* StockDetailPage.swift */,
 				B86264D3235041A600DE3654 /* SceneDelegate.swift */,
 				B86264D5235041A600DE3654 /* ViewController.swift */,
-				B86264D7235041A600DE3654 /* Minxuan.storyboard */,
 				B86264DA235041A700DE3654 /* Assets.xcassets */,
+				DC76EA312359830C00F92066 /* TommyTrojan.jpg */,
 				B86264DC235041A700DE3654 /* LaunchScreen.storyboard */,
 				B86264DF235041A700DE3654 /* Info.plist */,
 				B86265012350427200DE3654 /* LoginViewController.swift */,
@@ -238,9 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC76EA3023597CE400F92066 /* Main.storyboard in Resources */,
 				B86264DE235041A700DE3654 /* LaunchScreen.storyboard in Resources */,
+				DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */,
 				B86264DB235041A700DE3654 /* Assets.xcassets in Resources */,
-				B86264D9235041A600DE3654 /* Minxuan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +281,11 @@
 				B86264D6235041A600DE3654 /* ViewController.swift in Sources */,
 				B86265022350427200DE3654 /* LoginViewController.swift in Sources */,
 				B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */,
+				DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */,
+				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
+				DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,20 +321,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B86264D7235041A600DE3654 /* Minxuan.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B86264D8235041A600DE3654 /* Base */,
-			);
-			name = Minxuan.storyboard;
-			sourceTree = "<group>";
-		};
 		B86264DC235041A700DE3654 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B86264DD235041A700DE3654 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DC76EA2E23597CE400F92066 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC76EA2F23597CE400F92066 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -443,7 +459,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZC2T7N9AH;
 				INFOPLIST_FILE = projectApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZC2T7N9AH;
 				INFOPLIST_FILE = projectApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
