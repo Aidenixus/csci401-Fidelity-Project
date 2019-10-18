@@ -14,12 +14,14 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchFriendButton.layer.cornerRadius = 10
         friendResultTableView.delegate = self
         friendResultTableView.dataSource = self
         friendResultTableView.isHidden = true
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var searchFriendButton: UIButton!
     
     @IBAction func didTapSearchButton(_ sender: UIButton) {
         if (searchBar.text == "Zhu") {

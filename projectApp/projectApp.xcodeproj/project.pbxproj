@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8589E162359C9DE000A0196 /* SearchStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8589E152359C9DE000A0196 /* SearchStockViewController.swift */; };
 		B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D1235041A600DE3654 /* AppDelegate.swift */; };
 		B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D3235041A600DE3654 /* SceneDelegate.swift */; };
 		B86264D6235041A600DE3654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264D5235041A600DE3654 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8589E152359C9DE000A0196 /* SearchStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStockViewController.swift; sourceTree = "<group>"; };
 		B86264CE235041A600DE3654 /* projectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86264D1235041A600DE3654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B86264D3235041A600DE3654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				B86265012350427200DE3654 /* LoginViewController.swift */,
 				DF56513C23583F66006049E7 /* TabBarViewController.swift */,
 				DF7C34562359A498005684D8 /* SearchFriendViewController.swift */,
+				B8589E152359C9DE000A0196 /* SearchStockViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */,
 				DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */,
 				DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */,
+				B8589E162359C9DE000A0196 /* SearchStockViewController.swift in Sources */,
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
