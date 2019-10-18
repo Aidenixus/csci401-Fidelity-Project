@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:projectApp.xcodeproj">
+      location = "group:../../Documentations/UI Design/iCons/Fidelity Retro (With Font).png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

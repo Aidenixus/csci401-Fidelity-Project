@@ -26,7 +26,7 @@ class User {
     }
 }
 
-let dummyUser: User = User(username: "tommy", password: "123", balance: 287.98, stock: [
+let dummyUser: User = User(username: "TommyTrojan", password: "123", balance: 287.98, stock: [
         "Amazon.com, Inc.",
         "Walt Disney Co.",
         "Dell",
