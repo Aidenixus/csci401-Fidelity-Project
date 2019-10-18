@@ -10,14 +10,11 @@ import UIKit
 
 class BankAccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var cards = [
-        "**** **** **** 4367",
-        "**** **** **** 8734",
-        "**** **** **** 3097",
-        "**** **** **** 2029"
-    ]
-
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var bankAccountTableView: UITableView!
+    @IBAction func didTapCancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         bankAccountTableView.delegate = self
@@ -27,14 +24,14 @@ class BankAccountViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cards.count
+        return dummyUser.cards.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bankAccountCell", for: indexPath)
 
-        cell.textLabel?.text = cards[indexPath.row]
+        cell.textLabel?.text = dummyUser.cards[indexPath.row]
 
         return cell
     }

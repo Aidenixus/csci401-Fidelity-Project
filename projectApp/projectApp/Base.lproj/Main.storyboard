@@ -179,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkc-zQ-OVh">
-                                <rect key="frame" x="202" y="318" width="125" height="21"/>
+                                <rect key="frame" x="202" y="318" width="141" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -528,7 +528,7 @@
                                     <navigationItem title="Bank Account" id="CCL-MN-zDI">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Yx6-Wf-Fh0">
                                             <connections>
-                                                <segue destination="5ct-aC-FJq" kind="presentation" modalPresentationStyle="fullScreen" id="gk6-lK-554"/>
+                                                <action selector="didTapCancel:" destination="HkZ-O7-n4b" id="WIj-Ve-QWe"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YcL-A8-9fK"/>
@@ -589,6 +589,7 @@
                     <navigationItem key="navigationItem" id="5Lm-lX-8rb"/>
                     <connections>
                         <outlet property="bankAccountTableView" destination="2eP-JH-Yjh" id="pqx-CN-tpG"/>
+                        <outlet property="cancelButton" destination="Yx6-Wf-Fh0" id="TUl-Iv-VP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTf-0X-Ytm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -612,7 +613,4 @@
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gk6-lK-554"/>
-    </inferredMetricsTieBreakers>
 </document>
