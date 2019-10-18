@@ -16,6 +16,8 @@
 		B86264E9235041A700DE3654 /* projectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264E8235041A700DE3654 /* projectAppTests.swift */; };
 		B86264F4235041A700DE3654 /* projectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264F3235041A700DE3654 /* projectAppUITests.swift */; };
 		B86265022350427200DE3654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86265012350427200DE3654 /* LoginViewController.swift */; };
+		B8E8B70A235A459B00E38B02 /* Fidelity Icon (Retro) WF.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */; };
+		B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */; };
 		DC76EA3023597CE400F92066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA2E23597CE400F92066 /* Main.storyboard */; };
 		DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA312359830C00F92066 /* TommyTrojan.jpg */; };
 		DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA33235986DA00F92066 /* SettingPage.swift */; };
@@ -59,8 +61,10 @@
 		B86264F3235041A700DE3654 /* projectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAppUITests.swift; sourceTree = "<group>"; };
 		B86264F5235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86265012350427200DE3654 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fidelity Icon (Retro) WF.png"; sourceTree = "<group>"; };
+		B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fidelity Icon (Retro) BF.png"; sourceTree = "<group>"; };
 		DC76EA2F23597CE400F92066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DC76EA312359830C00F92066 /* TommyTrojan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TommyTrojan.jpg; path = Assets.xcassets/TommyTrojan.jpg; sourceTree = "<group>"; };
+		DC76EA312359830C00F92066 /* TommyTrojan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TommyTrojan.jpg; sourceTree = "<group>"; };
 		DC76EA33235986DA00F92066 /* SettingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/SettingPage.swift"; sourceTree = "<group>"; };
 		DC76EA34235986DA00F92066 /* ProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/ProfilePage.swift"; sourceTree = "<group>"; };
 		DC76EA35235986DA00F92066 /* StockDetailPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockDetailPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/StockDetailPage.swift"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		B86264D0235041A600DE3654 /* projectApp */ = {
 			isa = PBXGroup;
 			children = (
+				B8E8B70C235A463E00E38B02 /* appAsset */,
 				DC76EA2E23597CE400F92066 /* Main.storyboard */,
 				B86264D1235041A600DE3654 /* AppDelegate.swift */,
 				DC76EA34235986DA00F92066 /* ProfilePage.swift */,
@@ -126,7 +131,6 @@
 				B86264D5235041A600DE3654 /* ViewController.swift */,
 				DF7C34582359AE6B005684D8 /* BankAccountTableViewController.swift */,
 				B86264DA235041A700DE3654 /* Assets.xcassets */,
-				DC76EA312359830C00F92066 /* TommyTrojan.jpg */,
 				B86264DC235041A700DE3654 /* LaunchScreen.storyboard */,
 				B86264DF235041A700DE3654 /* Info.plist */,
 				B86265012350427200DE3654 /* LoginViewController.swift */,
@@ -153,6 +157,16 @@
 				B86264F5235041A700DE3654 /* Info.plist */,
 			);
 			path = projectAppUITests;
+			sourceTree = "<group>";
+		};
+		B8E8B70C235A463E00E38B02 /* appAsset */ = {
+			isa = PBXGroup;
+			children = (
+				B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */,
+				B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */,
+				DC76EA312359830C00F92066 /* TommyTrojan.jpg */,
+			);
+			path = appAsset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E8B70A235A459B00E38B02 /* Fidelity Icon (Retro) WF.png in Resources */,
 				DC76EA3023597CE400F92066 /* Main.storyboard in Resources */,
 				B86264DE235041A700DE3654 /* LaunchScreen.storyboard in Resources */,
+				B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */,
 				DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */,
 				B86264DB235041A700DE3654 /* Assets.xcassets in Resources */,
 			);
