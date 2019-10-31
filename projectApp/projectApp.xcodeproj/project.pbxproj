@@ -24,6 +24,7 @@
 		DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA34235986DA00F92066 /* ProfilePage.swift */; };
 		DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA35235986DA00F92066 /* StockDetailPage.swift */; };
 		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
+		DF701838236AB7FD004C539A /* AddRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF701837236AB7FD004C539A /* AddRecipientsViewController.swift */; };
 		DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34562359A498005684D8 /* SearchFriendViewController.swift */; };
 		DF7C34592359AE6B005684D8 /* BankAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34582359AE6B005684D8 /* BankAccountTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		DC76EA34235986DA00F92066 /* ProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/ProfilePage.swift"; sourceTree = "<group>"; };
 		DC76EA35235986DA00F92066 /* StockDetailPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockDetailPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/StockDetailPage.swift"; sourceTree = "<group>"; };
 		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DF701837236AB7FD004C539A /* AddRecipientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientsViewController.swift; sourceTree = "<group>"; };
 		DF7C34562359A498005684D8 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		DF7C34582359AE6B005684D8 /* BankAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 				DF56513C23583F66006049E7 /* TabBarViewController.swift */,
 				DF7C34562359A498005684D8 /* SearchFriendViewController.swift */,
 				B8589E152359C9DE000A0196 /* SearchStockViewController.swift */,
+				DF701837236AB7FD004C539A /* AddRecipientsViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
+				DF701838236AB7FD004C539A /* AddRecipientsViewController.swift in Sources */,
 				DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
