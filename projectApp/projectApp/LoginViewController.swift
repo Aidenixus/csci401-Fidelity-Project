@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class User {
     var username: String
@@ -41,14 +42,16 @@ let dummyUser: User = User(username: "TommyTrojan", password: "123", balance: 28
     ])
 
 class LoginViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    //Login Button
     @IBOutlet weak var loginButton: UIButton!
-    
+    //Signup Button
     @IBOutlet weak var signUpButton: UIButton!
+    
     @IBAction func didTapLogin(_ sender: UIButton) {
         print("username: ", usernameTextField.text!)
         print("password: ", passwordTextField.text!)
@@ -59,9 +62,32 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var currUsername: String!
+    @IBOutlet var currPassword: String!
+    
+    @IBOutlet var tableView: UITableView!
+    
+    func getUsername() -> String {
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document("ThrHwrzKcIGygD3pgqeT")
+        var dataUsername = ""
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                dataUsername = document.get("name") as! String
+                print("Inner: ", dataUsername)
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+        return dataUsername
+    }
     
     func verifyLogin(username: String, password: String)
     {
+        var dataUsername = getUsername()
+        
+        print("Outter: ", dataUsername)
         
         let alert = UIAlertController(title: "Wrong Password, please try again.", message: nil, preferredStyle: UIAlertController.Style.alert)
         
@@ -72,11 +98,11 @@ class LoginViewController: UIViewController {
         //  do query of username to password to backend now
         
         // do verification based on the username/password fetched from backend
-        var verified = false;
-        if (username == dummyUser.username && password == dummyUser.password){
+        var verified = false
+        if(username == dataUsername && password == currPassword){
             verified = true;
         }
-        
+            
         if (verified)
         {
             // jump into the profile picture (or tab bar view controller page, with Profile Picture displayed on default
