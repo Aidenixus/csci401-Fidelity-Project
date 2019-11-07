@@ -14,7 +14,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.isSecureTextEntry = true
-        usernameTextField.isSecureTextEntry = true
+        reenteredPasswordTextField.isSecureTextEntry = true
+        usernameTextField.isSecureTextEntry = false
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var usernameTextField: UITextField!

@@ -21,13 +21,13 @@
 		B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */; };
 		CA4DAEF18223E7ACF430E0C5 /* Pods_projectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7691092800074E0F76EF47 /* Pods_projectApp.framework */; };
 		D150B7486A92B562C50DD942 /* Pods_projectApp_projectAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585E528CBA7C81E8E6B2CB21 /* Pods_projectApp_projectAppUITests.framework */; };
+		DC20835E2373728E00824684 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC20835D2373728E00824684 /* GoogleService-Info.plist */; };
 		DC76EA3023597CE400F92066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA2E23597CE400F92066 /* Main.storyboard */; };
 		DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA312359830C00F92066 /* TommyTrojan.jpg */; };
 		DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA33235986DA00F92066 /* SettingPage.swift */; };
 		DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA34235986DA00F92066 /* ProfilePage.swift */; };
 		DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA35235986DA00F92066 /* StockDetailPage.swift */; };
 		DC9BA2C8236A937600045D74 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BA2C7236A937600045D74 /* SignUpViewController.swift */; };
-		DC9BA2CC236A9E7000045D74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC9BA2CB236A9E7000045D74 /* GoogleService-Info.plist */; };
 		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
 		DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34562359A498005684D8 /* SearchFriendViewController.swift */; };
 		DF7C34592359AE6B005684D8 /* BankAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34582359AE6B005684D8 /* BankAccountTableViewController.swift */; };
@@ -76,13 +76,13 @@
 		B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fidelity Icon (Retro) BF.png"; sourceTree = "<group>"; };
 		C8488325575887746E5753DA /* Pods-projectAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectAppTests.debug.xcconfig"; path = "Target Support Files/Pods-projectAppTests/Pods-projectAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D46D55760C3578DD0E57947D /* Pods-projectApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectApp.debug.xcconfig"; path = "Target Support Files/Pods-projectApp/Pods-projectApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DC20835D2373728E00824684 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "projectApp/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DC76EA2F23597CE400F92066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC76EA312359830C00F92066 /* TommyTrojan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TommyTrojan.jpg; sourceTree = "<group>"; };
 		DC76EA33235986DA00F92066 /* SettingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/SettingPage.swift"; sourceTree = "<group>"; };
 		DC76EA34235986DA00F92066 /* ProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/ProfilePage.swift"; sourceTree = "<group>"; };
 		DC76EA35235986DA00F92066 /* StockDetailPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockDetailPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/StockDetailPage.swift"; sourceTree = "<group>"; };
 		DC9BA2C7236A937600045D74 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = projectApp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
-		DC9BA2CB236A9E7000045D74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DF7C34562359A498005684D8 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		DF7C34582359AE6B005684D8 /* BankAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountTableViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		B86264D0235041A600DE3654 /* projectApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC20835D2373728E00824684 /* GoogleService-Info.plist */,
 				B8E8B70C235A463E00E38B02 /* appAsset */,
-				DC9BA2CB236A9E7000045D74 /* GoogleService-Info.plist */,
 				DC9BA2C7236A937600045D74 /* SignUpViewController.swift */,
 				B86265012350427200DE3654 /* LoginViewController.swift */,
 				DC76EA2E23597CE400F92066 /* Main.storyboard */,
@@ -330,7 +330,7 @@
 				B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */,
 				DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */,
 				B86264DB235041A700DE3654 /* Assets.xcassets in Resources */,
-				DC9BA2CC236A9E7000045D74 /* GoogleService-Info.plist in Resources */,
+				DC20835E2373728E00824684 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
