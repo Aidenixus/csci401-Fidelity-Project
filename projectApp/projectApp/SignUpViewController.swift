@@ -27,14 +27,7 @@ class SignUpViewController: UIViewController {
     }
     
     func veryfySignUp(username: String, password: String, reenteredPassword: String){
-        
-//        let dudu = Auth.auth()
-//
-//
-//        dudu.createUser(withEmail: username, password: password) { authResult, error in
-//                 // ...
-//               }
-        
+            
         let db = Firestore.firestore()
          //Add a new document with a generated ID
 
@@ -76,9 +69,7 @@ class SignUpViewController: UIViewController {
                     print("Document added with ID: \(ref!.documentID)")
                 }
             }
-            
             self.present(SuccessAlert, animated: true, completion: nil)
-            
         }
         else
         {

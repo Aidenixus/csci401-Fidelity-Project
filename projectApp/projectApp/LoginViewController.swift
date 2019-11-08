@@ -26,21 +26,17 @@ class User {
         self.friends = friends;
         self.cards = cards;
     }
+    init(){
+        self.username = "";
+        self.password = "";
+        self.balance = 0;
+        self.stock = [];
+        self.friends = [];
+        self.cards = [];
+    }
 }
 
-var dummyUser: User = User(username: "TommyTrojan", password: "123", balance: 287.98, stock: [
-        "Amazon.com, Inc.",
-        "Walt Disney Co.",
-        "Dell",
-        "Microsoft",
-        "Apple Inc."
-    ],
-    friends: [], cards: [
-        "**** **** **** 4367",
-        "**** **** **** 8734",
-        "**** **** **** 3097",
-        "**** **** **** 2029"
-    ])
+var currUser: User = User()
 
 
 class LoginViewController: UIViewController {
@@ -49,9 +45,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Mysterious Code
-        LoadFromDatabase (completion: { dataUsername, dataPassword in
-            self.usernameDatabase = dataUsername
-            self.passwordDatabase = dataPassword
+        LoadFromDatabase (completion: { dataUsers in
+            self.userDatabase = dataUsers
         })
         //Mysterious Code
     }
@@ -61,22 +56,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     
-    func LoadFromDatabase(completion: @escaping(String, String)->Void )
+    func LoadFromDatabase(completion: @escaping([User])->Void )
     {
         
-        var dataUsername = ""
-        var dataPassword = ""
-        db.collection("users").whereField("name", isEqualTo: "TommyTrojan")
-            .getDocuments { (querySnapshot, err) in
+        var dataUsers : [User] = []
+        db.collection("users").getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    //print("\(dcument.documentID) => \(document.data())")
-                    dataUsername = document.get("name") as! String
-                    dataPassword = document.get("password") as! String
-                    completion(dataUsername, dataPassword)
+                    let currUser = User(username: document.get("name") as! String, password: document.get("password") as! String, balance: document.get("balance") as! NSNumber
+                        , stock: document.get("stock") as! [String], friends: document.get("friends") as! [User], cards: document.get("cards") as! [String])
+                    dataUsers.append(currUser)
                 }
+                completion(dataUsers)
             }
         }
         // do verification based on the username/password fetched from backend
@@ -88,10 +81,14 @@ class LoginViewController: UIViewController {
 //        print("Outer: ", self.usernameDatabase)
 //        print("Outer: ", self.passwordDatabase)
         var verified = false
-        if(self.usernameInput == self.usernameDatabase && self.passwordInput == self.passwordDatabase){
-            verified = true;
+        
+        for users in self.userDatabase{
+            if(self.usernameInput == users.username && self.passwordInput == users.password){
+                currUser = users //The current user for this session is set
+                verified = true
+                break
+            }
         }
-
         let alert = UIAlertController(title: "Wrong Password, please try again.", message: nil, preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
@@ -122,8 +119,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var usernameInput: String!
     @IBOutlet var passwordInput: String!
-    @IBOutlet var usernameDatabase: String!
-    @IBOutlet var passwordDatabase: String!
+    
+    var userDatabase: [User]!
     
     
     @IBOutlet var tableView: UITableView!

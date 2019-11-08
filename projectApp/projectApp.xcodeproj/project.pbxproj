@@ -27,6 +27,8 @@
 		DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA33235986DA00F92066 /* SettingPage.swift */; };
 		DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA34235986DA00F92066 /* ProfilePage.swift */; };
 		DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EA35235986DA00F92066 /* StockDetailPage.swift */; };
+		DC7E1D252375458E00C403BC /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */; };
+		DC7E1D272375579800C403BC /* Emperor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E1D262375579800C403BC /* Emperor.jpg */; };
 		DC9BA2C8236A937600045D74 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BA2C7236A937600045D74 /* SignUpViewController.swift */; };
 		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
 		DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34562359A498005684D8 /* SearchFriendViewController.swift */; };
@@ -82,6 +84,8 @@
 		DC76EA33235986DA00F92066 /* SettingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/SettingPage.swift"; sourceTree = "<group>"; };
 		DC76EA34235986DA00F92066 /* ProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/ProfilePage.swift"; sourceTree = "<group>"; };
 		DC76EA35235986DA00F92066 /* StockDetailPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockDetailPage.swift; path = "../../../CSCI401-Fidelity-Project/projectApp/projectApp/StockDetailPage.swift"; sourceTree = "<group>"; };
+		DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
+		DC7E1D262375579800C403BC /* Emperor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Emperor.jpg; sourceTree = "<group>"; };
 		DC9BA2C7236A937600045D74 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = projectApp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DF7C34562359A498005684D8 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				DF56513C23583F66006049E7 /* TabBarViewController.swift */,
 				DF7C34562359A498005684D8 /* SearchFriendViewController.swift */,
 				B8589E152359C9DE000A0196 /* SearchStockViewController.swift */,
+				DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		B8E8B70C235A463E00E38B02 /* appAsset */ = {
 			isa = PBXGroup;
 			children = (
+				DC7E1D262375579800C403BC /* Emperor.jpg */,
 				B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */,
 				B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */,
 				DC76EA312359830C00F92066 /* TommyTrojan.jpg */,
@@ -328,6 +334,7 @@
 				DC76EA3023597CE400F92066 /* Main.storyboard in Resources */,
 				B86264DE235041A700DE3654 /* LaunchScreen.storyboard in Resources */,
 				B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */,
+				DC7E1D272375579800C403BC /* Emperor.jpg in Resources */,
 				DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */,
 				B86264DB235041A700DE3654 /* Assets.xcassets in Resources */,
 				DC20835E2373728E00824684 /* GoogleService-Info.plist in Resources */,
@@ -469,6 +476,7 @@
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
+				DC7E1D252375458E00C403BC /* AccountSettingViewController.swift in Sources */,
 				DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

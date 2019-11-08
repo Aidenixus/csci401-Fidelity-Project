@@ -10,6 +10,11 @@ import UIKit
 
 class SettingPage: UIViewController {
 
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBAction func didTapLogout(_ sender: Any) {
+        currUser = User()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
