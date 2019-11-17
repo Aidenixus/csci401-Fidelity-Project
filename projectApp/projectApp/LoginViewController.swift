@@ -15,10 +15,10 @@ class User {
     var password: String
     var balance:  NSNumber
     var stock: [String]
-    var friends: [User]
+    var friends: [String]
     var cards: [String]
     
-    init(username: String, password: String, balance: NSNumber, stock: [String], friends: [User], cards: [String]){
+    init(username: String, password: String, balance: NSNumber, stock: [String], friends: [String], cards: [String]){
         self.username = username;
         self.password = password;
         self.balance = balance;
@@ -37,7 +37,7 @@ class User {
 }
 
 var currUser: User = User()
-
+var userDatabase: [User]!
 
 class LoginViewController: UIViewController {
     
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         //Mysterious Code
         LoadFromDatabase (completion: { dataUsers in
-            self.userDatabase = dataUsers
+            userDatabase = dataUsers
         })
         //Mysterious Code
     }
@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
             } else {
                 for document in querySnapshot!.documents {
                     let currUser = User(username: document.get("name") as! String, password: document.get("password") as! String, balance: document.get("balance") as! NSNumber
-                        , stock: document.get("stock") as! [String], friends: document.get("friends") as! [User], cards: document.get("cards") as! [String])
+                        , stock: document.get("stock") as! [String], friends: document.get("friends") as! [String], cards: document.get("cards") as! [String])
                     dataUsers.append(currUser)
                 }
                 completion(dataUsers)
@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
 //        print("Outer: ", self.passwordDatabase)
         var verified = false
         
-        for users in self.userDatabase{
+        for users in userDatabase{
             if(self.usernameInput == users.username && self.passwordInput == users.password){
                 currUser = users //The current user for this session is set
                 verified = true
@@ -120,7 +120,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameInput: String!
     @IBOutlet var passwordInput: String!
     
-    var userDatabase: [User]!
+    
     
     
     @IBOutlet var tableView: UITableView!
