@@ -15,29 +15,35 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
            super.viewDidLoad()
         stockTableView.delegate = self
         stockTableView.dataSource = self
-
+        
+        if(currUser.username == "TommyTrojan"){
+            ProfilePic.image = UIImage(named: "TommyTrojan")
+        }
+        else{
+            ProfilePic.image = UIImage(named: "three")
+        }
+        
+        ProfilePic.layer.borderWidth = 1
+        ProfilePic.layer.masksToBounds = false
+        ProfilePic.layer.borderColor = UIColor.black.cgColor
+        ProfilePic.layer.cornerRadius = ProfilePic.frame.height/2
+        ProfilePic.clipsToBounds = true
+        ProfilePic.contentMode = UIView.ContentMode.scaleAspectFit
            
-          ProfilePic.layer.borderWidth = 1
-          ProfilePic.layer.masksToBounds = false
-          ProfilePic.layer.borderColor = UIColor.black.cgColor
-          ProfilePic.layer.cornerRadius = ProfilePic.frame.height/2
-          ProfilePic.clipsToBounds = true
-           ProfilePic.contentMode = UIView.ContentMode.scaleAspectFit
-           
-        balanceAmount.text = "$" + dummyUser.balance.stringValue
-        nameLabel.text = dummyUser.username
+        balanceAmount.text = "$" + currUser.balance.stringValue
+        nameLabel.text = currUser.username
         
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(dummyUser.stock)
-        return dummyUser.stock.count
+        print(currUser.stock)
+        return currUser.stock.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = stockTableView.dequeueReusableCell(withIdentifier: "stock", for: indexPath)
         
-        cell.textLabel?.text = dummyUser.stock[indexPath.row]
+        cell.textLabel?.text = currUser.stock[indexPath.row]
         return cell
     }
 

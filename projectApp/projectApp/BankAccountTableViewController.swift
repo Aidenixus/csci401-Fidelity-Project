@@ -24,14 +24,14 @@ class BankAccountViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dummyUser.cards.count
+        return currUser.cards.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bankAccountCell", for: indexPath)
 
-        cell.textLabel?.text = dummyUser.cards[indexPath.row]
+        cell.textLabel?.text = currUser.cards[indexPath.row]
 
         return cell
     }

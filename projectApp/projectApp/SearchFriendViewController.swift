@@ -8,8 +8,6 @@
 
 import UIKit
 
-let dummySearchFriendResult = ["Lucas Zhu", "Adam Zhu", "Hiro Zhu", "Taka Zhu"]
-
 class SearchFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
@@ -17,31 +15,48 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
         searchFriendButton.layer.cornerRadius = 10
         friendResultTableView.delegate = self
         friendResultTableView.dataSource = self
-        friendResultTableView.isHidden = true
+        friendResultTableView.isHidden = false
+        for friends in currUser.friends{
+            userFriendList.append(friends)
+        }
+        filterFriendList = userFriendList
         // Do any additional setup after loading the view.
     }
+    
+    var userFriendList = [String]() //friend list
+    var filterFriendList = [String]() //The actual list to be presented based on search query
     
     @IBOutlet weak var searchFriendButton: UIButton!
     
     @IBAction func didTapSearchButton(_ sender: UIButton) {
-        if (searchBar.text == "Zhu") {
-            friendResultTableView.isHidden = false
-        } else{
-            friendResultTableView.isHidden = true
+        let toSearch: String = searchBar.text ?? ""
+        print(toSearch)
+        if(toSearch == ""){
+            filterFriendList = userFriendList
         }
+        else{
+            filterFriendList = []
+            for i in 0..<userFriendList.count{
+                let curr = userFriendList[i] as String
+                if(curr.contains(toSearch)){
+                    filterFriendList.append(curr)
+                }
+            }
+        }
+        friendResultTableView.reloadData()
     }
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var friendResultTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummySearchFriendResult.count
+        return filterFriendList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = friendResultTableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
         
         
-        cell.textLabel?.text = dummySearchFriendResult[indexPath.row]
+        cell.textLabel?.text = filterFriendList[indexPath.row]
         return cell
     }
     /*

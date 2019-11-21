@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
+let db = Firestore.firestore()
 class User {
     var username: String
     var password: String
     var balance:  NSNumber
     var stock: [String]
-    var friends: [User]
+    var friends: [String]
     var cards: [String]
     
-    init(username: String, password: String, balance: NSNumber, stock: [String], friends: [User], cards: [String]){
+    init(username: String, password: String, balance: NSNumber, stock: [String], friends: [String], cards: [String]){
         self.username = username;
         self.password = password;
         self.balance = balance;
@@ -24,90 +26,102 @@ class User {
         self.friends = friends;
         self.cards = cards;
     }
+    init(){
+        self.username = "";
+        self.password = "";
+        self.balance = 0;
+        self.stock = [];
+        self.friends = [];
+        self.cards = [];
+    }
 }
 
-let dummyUser: User = User(username: "TommyTrojan", password: "123", balance: 287.98, stock: [
-        "Amazon.com, Inc.",
-        "Walt Disney Co.",
-        "Dell",
-        "Microsoft",
-        "Apple Inc."
-    ],
-    friends: [], cards: [
-        "**** **** **** 4367",
-        "**** **** **** 8734",
-        "**** **** **** 3097",
-        "**** **** **** 2029"
-    ])
+var currUser: User = User()
+var userDatabase: [User]!
 
 class LoginViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Mysterious Code
+        LoadFromDatabase (completion: { dataUsers in
+            userDatabase = dataUsers
+        })
+        //Mysterious Code
+    }
+    //Login Button
+    @IBOutlet weak var loginButton: UIButton!
+    //Signup Button
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    func LoadFromDatabase(completion: @escaping([User])->Void )
+    {
+        
+        var dataUsers : [User] = []
+        db.collection("users").getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let currUser = User(username: document.get("name") as! String, password: document.get("password") as! String, balance: document.get("balance") as! NSNumber
+                        , stock: document.get("stock") as! [String], friends: document.get("friends") as! [String], cards: document.get("cards") as! [String])
+                    dataUsers.append(currUser)
+                }
+                completion(dataUsers)
+            }
+        }
+        // do verification based on the username/password fetched from backend
     }
     
-    @IBOutlet weak var loginButton: UIButton!
-    
-    @IBOutlet weak var signUpButton: UIButton!
     @IBAction func didTapLogin(_ sender: UIButton) {
-        print("username: ", usernameTextField.text!)
-        print("password: ", passwordTextField.text!)
-        verifyLogin(username: usernameTextField.text!, password: passwordTextField.text!)
+        usernameInput = usernameTextField.text!
+        passwordInput = passwordTextField.text!
+//        print("Outer: ", self.usernameDatabase)
+//        print("Outer: ", self.passwordDatabase)
+        var verified = false
+        
+        for users in userDatabase{
+            if(self.usernameInput == users.username && self.passwordInput == users.password){
+                currUser = users //The current user for this session is set
+                verified = true
+                break
+            }
+        }
+        let alert = UIAlertController(title: "Wrong Password, please try again.", message: nil, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+
+        if (!verified) {
+            print("Password does not verified")
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            // jump into the profile picture (or tab bar view controller page, with Profile Picture displayed on default
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+
+            guard let destination = mainStoryboard.instantiateViewController(withIdentifier: "tabBarViewController") as? TabBarViewController else {
+                print("Couldn't find the view controller")
+                return
+            }
+            print("Password verified")
+            destination.modalTransitionStyle = .crossDissolve
+            destination.modalPresentationStyle = .fullScreen
+            self.present(destination, animated: true, completion: nil)
+        }
     }
     @IBAction func didTapSignUp(_ sender: UIButton) {
     }
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var usernameInput: String!
+    @IBOutlet var passwordInput: String!
     
-    func verifyLogin(username: String, password: String)
-    {
-        
-        let alert = UIAlertController(title: "Wrong Password, please try again.", message: nil, preferredStyle: UIAlertController.Style.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            
-        }))
-        
-        //  do query of username to password to backend now
-        
-        // do verification based on the username/password fetched from backend
-        var verified = false;
-        if (username == dummyUser.username && password == dummyUser.password){
-            verified = true;
-        }
-        
-        if (verified)
-        {
-            // jump into the profile picture (or tab bar view controller page, with Profile Picture displayed on default
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            
-            guard let destination = mainStoryboard.instantiateViewController(withIdentifier: "tabBarViewController") as? TabBarViewController else {
-                print("Couldn't find the view controller")
-                return
-            }
-            
-            destination.modalTransitionStyle = .crossDissolve
-            destination.modalPresentationStyle = .fullScreen
-            
-            present(destination, animated: true, completion: nil)
-            
-        }
-        else
-        {
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-    }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    @IBOutlet var tableView: UITableView!
 }

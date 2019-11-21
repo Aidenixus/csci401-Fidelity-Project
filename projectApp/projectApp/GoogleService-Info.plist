@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>403635276176-57r03s712sfphojbo4rus2aortos7u8g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.403635276176-57r03s712sfphojbo4rus2aortos7u8g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCl69d91VXJVUf8lbp64YUrieZzIqlqKC4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>403635276176</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Minxuan-Song.projectApp</string>
+	<key>PROJECT_ID</key>
+	<string>duduzuiba-93c19</string>
+	<key>STORAGE_BUCKET</key>
+	<string>duduzuiba-93c19.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:403635276176:ios:36e1f7b88412e06a21cb15</string>
+	<key>DATABASE_URL</key>
+	<string>https://duduzuiba-93c19.firebaseio.com</string>
+</dict>
+</plist>

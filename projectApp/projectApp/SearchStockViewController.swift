@@ -17,19 +17,22 @@ class SearchStockViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var input: UISearchBar!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            var SearchTextInfo = segue.destination as! DisplayStockInfoViewController
+        if(input.text == ""){
+            //TODO: Add error message
+            SearchTextInfo.searchInput = "Error"
+        }
+        else {
+            SearchTextInfo.searchInput = input.text!
+        }
+    }
     
     @IBOutlet weak var searchStockButton: UIButton!
     
     @IBAction func didTapSearchStock(_ sender: UIButton) {
+        performSegue(withIdentifier: "stockSegue" , sender: self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
