@@ -9,9 +9,9 @@
 import UIKit
 
 let recipients = [
-    "Xubo Zhu:     xubozhu@usc.edu",
-    "Hiro Zhu:     hirozhu@usc.edu",
-    "Moto Zhu:     motozhu@usc.edu"
+    "Xubo Zhu",
+    "Hiro Zhu",
+    "Moto Zhu"
 ]
 
 class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -38,6 +38,23 @@ class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITabl
         
         cell.textLabel?.text = recipients[indexPath.row]
         return cell
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        // Segue to the second view controller
+        self.performSegue(withIdentifier: "paySegue", sender: self)
+    }
+
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // get a reference to the second view controller
+        let payViewController = segue.destination as! PayViewController
+
+        // set a variable in the second view controller with the data to pass
+        payViewController.receivedData = recipients[(recipientsTableView.indexPathForSelectedRow?.row)!]
     }
 
     /*

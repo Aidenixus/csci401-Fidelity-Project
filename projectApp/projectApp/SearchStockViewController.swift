@@ -17,8 +17,14 @@ class SearchStockViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var searchStockButton: UIButton!
+    @IBAction func didTapSearchStockButton(_ sender: UIButton) {
+        if (searchBar.text == "Ford"){
+            performSegue(withIdentifier: "segueToStockInfo", sender: nil)
+        }
+    }
     
     @IBAction func didTapSearchStock(_ sender: UIButton) {
     }
