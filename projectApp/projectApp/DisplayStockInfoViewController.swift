@@ -163,6 +163,133 @@ class DisplayStockInfoViewController: UIViewController {
     }
     
 
+    @IBAction func BuyButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        let balanceFailure = UIAlertController(title: "Balance insufficient. Please try again", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let inputFailure = UIAlertController(title: "Please try again with a valid input number", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let Success = UIAlertController(title: "Success!", message: nil, preferredStyle: UIAlertController.Style.alert)
+        
+        balanceFailure.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in balanceFailure.dismiss(animated: true, completion: nil)
+        }))
+        inputFailure.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in inputFailure.dismiss(animated: true, completion: nil)
+        }))
+        Success.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in Success.dismiss(animated: true, completion: nil)
+        }))
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Type in the amount that you'd like to buy"
+            textField.keyboardType = .numberPad  // it can only take in numbers now
+        }
+        
+        var amount = 0
+        
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
+            guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
+            print("\(String(describing: textField.text))")
+            amount = (textField.text! as NSString).integerValue
+            //check if it can actually do the buying here
+            if amount<0  //bad input
+            {
+                self.present(inputFailure, animated: true, completion: nil)
+            }
+            else
+            {
+                if Double(amount)*self.stockPrice > currUser.balance.doubleValue // can't make the purchase, not enough money
+                {
+                    self.present(balanceFailure, animated: true, completion: nil)
+                }
+                else
+                {
+                    currUser.balance = NSNumber(value: currUser.balance.doubleValue - Double(amount)*self.stockPrice) // making the purchase
+                    if currUser.stock[self.stockName] == nil{
+                        currUser.stock[self.stockName] = amount
+                    }
+                    else
+                    {
+                        currUser.stock[self.stockName] = (currUser.stock[self.stockName] ?? 0) + amount
+                    }
+                    self.present(Success, animated: true, completion: nil)
+                }
+            }
+            currProfilePage.viewDidLoad()
+        }
+        
+        alertController.addAction(confirmAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func SellButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        let stockFailure = UIAlertController(title: "Not possessing enough stock. Try again with a valid amount", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let inputFailure = UIAlertController(title: "Please try again with a valid input number", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let Success = UIAlertController(title: "Success!", message: nil, preferredStyle: UIAlertController.Style.alert)
+        
+        stockFailure.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in stockFailure.dismiss(animated: true, completion: nil)
+        }))
+        inputFailure.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in inputFailure.dismiss(animated: true, completion: nil)
+        }))
+        Success.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in Success.dismiss(animated: true, completion: nil)
+        }))
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Type in the amount that you'd like to sell"
+            textField.keyboardType = .numberPad  // it can only take in numbers now
+        }
+        
+        var amount = 0
+        
+        let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
+            guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
+            print("\(String(describing: textField.text))")
+            amount = (textField.text! as NSString).integerValue
+            //check if it can actually do the buying here
+            if amount<0  // bad input
+            {
+                self.present(inputFailure, animated: true, completion: nil)
+            }
+            else
+            {
+                if currUser.stock[self.stockName] == nil{  // not enough stock in currUser
+                    self.present(stockFailure, animated: true, completion: nil)
+                }
+                else
+                {
+                    if currUser.stock[self.stockName] ?? -1 < amount  // can't make the purchase, not enough stock
+                    {
+                        self.present(stockFailure, animated: true, completion: nil)
+                    }
+                    else
+                    {
+                        currUser.stock[self.stockName] = (currUser.stock[self.stockName] ?? 0) - amount  // what after ?? will never happen, because we ensured that it will never be nill before, it has to be > than amount
+                        currUser.balance = NSNumber(value: currUser.balance.doubleValue + Double(amount)*self.stockPrice)
+                        if currUser.stock[self.stockName] == 0
+                        {
+                            currUser.stock.removeValue(forKey: self.stockName)  // remove that stock on hold if it's 0
+                        }
+                        self.present(Success, animated: true, completion: nil)
+                    }
+                }
+            }
+            currProfilePage.viewDidLoad()
+        }
+        
+        alertController.addAction(confirmAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+        currProfilePage.viewDidLoad()
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

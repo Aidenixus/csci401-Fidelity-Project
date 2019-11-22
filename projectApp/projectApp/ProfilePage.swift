@@ -1,6 +1,8 @@
 
 import UIKit
 
+var currProfilePage = ProfilePage()
+
 
 class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -33,6 +35,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         balanceAmount.text = "$" + currUser.balance.stringValue
         nameLabel.text = currUser.username
         
+        
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +46,15 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = stockTableView.dequeueReusableCell(withIdentifier: "stock", for: indexPath)
         
-        cell.textLabel?.text = currUser.stock[indexPath.row]
+        var arrayStock = [String]()
+        for i in currUser.stock{
+            arrayStock.append(i.key)
+        }
+        
+        cell.textLabel?.text = arrayStock[indexPath.row]
+        
+        currProfilePage = self
+        
         return cell
     }
 
