@@ -14,28 +14,28 @@ class User {
     var username: String
     var password: String
     var balance:  NSNumber
-    var investmentBalance: NSNumber
     var stock: [String: Int]
     var friends: [String]
     var cards: [String]
+    var investmentBalance: NSNumber
     
     init(username: String, password: String, balance: NSNumber, stock: [String: Int], friends: [String], cards: [String], investmentBalance: NSNumber){
-        self.username = username;
-        self.password = password;
-        self.balance = balance;
-        self.stock = stock;
-        self.friends = friends;
+        self.username = username
+        self.password = password
+        self.balance = balance
+        self.stock = stock
+        self.friends = friends
         self.cards = cards
         self.investmentBalance = investmentBalance
     }
     init(){
-        self.username = "";
-        self.password = "";
-        self.balance = 0;
-        self.stock = [String: Int]();
-        self.friends = [];
-        self.cards = [];
-        self.investmentBalance = 0;
+        self.username = ""
+        self.password = ""
+        self.balance = 0
+        self.stock = [String: Int]()
+        self.friends = []
+        self.cards = []
+        self.investmentBalance = 0
     }
 }
 
@@ -68,8 +68,8 @@ class LoginViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    let currUser = User(username: document.get("name") as! String, password: document.get("password") as! String, balance: document.get("balance") as! NSNumber, stock: document.get("stock") as! [String: Int], friends: document.get("friends") as! [String], cards: document.get("cards") as! [String], investmentBalance: document.get("investmentBalance") as! NSNumber)
-                    dataUsers.append(currUser)
+                    let dataUser = User(username: document.get("name") as! String, password: document.get("password") as! String, balance: document.get("balance") as! NSNumber, stock: document.get("stock") as! [String: Int], friends: document.get("friends") as! [String], cards: document.get("cards") as! [String], investmentBalance: document.get("investmentBalance") as! NSNumber)
+                    dataUsers.append(dataUser)
                 }
                 completion(dataUsers)
             }

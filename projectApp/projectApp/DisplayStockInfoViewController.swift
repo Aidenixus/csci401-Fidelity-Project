@@ -38,7 +38,6 @@ struct StockNews: Decodable {
         self.date = ""
         self.tickers = []
         self.topics = []
-        
     }
 }
 

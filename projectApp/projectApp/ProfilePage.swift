@@ -8,6 +8,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
    
     
+    @IBOutlet weak var investmentBalanceAmount: UILabel!
     @IBOutlet weak var balanceAmount: UILabel!
     @IBOutlet weak var ProfilePic: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -34,7 +35,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
            
         balanceAmount.text = "$" + currUser.balance.stringValue
         nameLabel.text = currUser.username
-        
+        investmentBalanceAmount.text = "$" + currUser.investmentBalance.stringValue
         
        }
     
