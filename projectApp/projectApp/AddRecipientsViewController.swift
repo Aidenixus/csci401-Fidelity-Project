@@ -8,11 +8,7 @@
 
 import UIKit
 
-let recipients = [
-    "Xubo Zhu",
-    "Hiro Zhu",
-    "Moto Zhu"
-]
+let recipients = currUser.friends
 
 class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
