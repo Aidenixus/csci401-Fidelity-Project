@@ -12,10 +12,14 @@ class PayViewController: UIViewController, UITextViewDelegate {
     
     var receivedData = ""
     var placeHolderText = "  What😀's it for🍔🍟🌭💍💌🎁💰❓"
+    var investAmount = 0.0
+    var payAmount = 0.0
 
+    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var recipientLabel: UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
+    @IBOutlet weak var payButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +40,54 @@ class PayViewController: UIViewController, UITextViewDelegate {
       }
     }
 
+    @IBAction func didTapPayButton(_ sender: UIButton) {
+        if (amountTextField.text == "") {
+            showAlertIfNumberIsEmpty()
+        } else if (messageTextView.text == "") {
+            showAlertIfMessageIsEmpty()
+        } else {
+            let investAmount = 0.1 * Double(amountTextField.text!)!
+            let alert = UIAlertController(title: "", message: "Would you like to put 10% of this transaction (💲\(String(format:"%.02f", investAmount))) into your investment account?", preferredStyle: UIAlertController.Style.actionSheet)
+
+            alert.addAction(UIAlertAction(title: "Yes🐷!", style: UIAlertAction.Style.default, handler: {(action) in self.showConfirmationAlert(invest: true)}))
+            alert.addAction(UIAlertAction(title: "Not this time", style: UIAlertAction.Style.default, handler: {(action) in self.showConfirmationAlert(invest: false)}))
+
+            alert.addAction(UIAlertAction(title: "❌", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+               
+            }))
+
+
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showConfirmationAlert(invest: Bool) {
+        payAmount = Double(amountTextField.text!)!
+        var messageToShow = "You will pay xxxxx 💲\(payAmount), and invest💲0.00 into your Fidelity account."
+        if (invest) {
+            investAmount = 0.1 * payAmount
+            messageToShow = "You will pay xxxxx 💲\(payAmount), and invest💲\(String(format:"%.02f", investAmount)) into your Fidelity account."
+        }
+        let alert = UIAlertController(title: nil, message: messageToShow, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Discard", style: UIAlertAction.Style.destructive, handler: nil ))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action) in self.dismiss(animated: true, completion: nil)} ))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlertIfMessageIsEmpty() {
+        let alert = UIAlertController(title: "Please enter a message.", message: "Such as: 🍩, 🎤, or 🏂?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlertIfNumberIsEmpty() {
+        let alert = UIAlertController(title: nil, message: "Please enter a 💲amount.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+
+    }
     /*
     // MARK: - Navigation
 

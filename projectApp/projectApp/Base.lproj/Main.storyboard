@@ -208,22 +208,17 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSp-fr-KK1">
-                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="    " id="cZf-Cm-tVN"/>
+                                    <barButtonItem title="    " width="101.66666666666666" id="cZf-Cm-tVN"/>
                                     <barButtonItem title="Profile" width="355" id="iIt-dm-vCs">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="EEo-uI-CoO">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HAS-gs-5nT">
-                                            <rect key="frame" x="374" y="4.6666666666666679" width="40" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="square.and.pencil" catalog="system"/>
-                                            <connections>
-                                                <segue destination="TKb-Zv-Kfc" kind="presentation" modalPresentationStyle="fullScreen" id="Hv3-Dr-0AL"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem title=" 💸Pay" id="cep-bv-aIe">
+                                        <connections>
+                                            <segue destination="TKb-Zv-Kfc" kind="presentation" modalPresentationStyle="fullScreen" id="cgG-Vy-NGu"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -699,7 +694,7 @@
                                 <rect key="frame" x="254" y="92" width="160" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkJ-TI-42h">
                                 <rect key="frame" x="40" y="92" width="214" height="34"/>
@@ -724,6 +719,9 @@
                                 <state key="normal" title="💸Pay💸">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapPayButton:" destination="E0Q-qK-pWi" eventType="touchUpInside" id="R3W-G3-dGe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="............Placeholer Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIe-Fb-lV6">
                                 <rect key="frame" x="0.0" y="158" width="414" height="35"/>
@@ -738,7 +736,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hl4-nO-dlF"/>
                     <connections>
+                        <outlet property="amountTextField" destination="yRG-MN-d3D" id="Od5-bp-3ig"/>
                         <outlet property="messageTextView" destination="vsG-gz-ZPG" id="4z7-O0-xdF"/>
+                        <outlet property="payButton" destination="ERN-5h-S2e" id="LKq-YG-bM6"/>
                         <outlet property="placeholderLabel" destination="hIe-Fb-lV6" id="axy-yi-vNE"/>
                         <outlet property="recipientLabel" destination="hkJ-TI-42h" id="L3R-HZ-iW3"/>
                     </connections>
@@ -764,6 +764,5 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
 </document>
