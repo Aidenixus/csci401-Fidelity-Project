@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -645,6 +645,24 @@
                                 <rect key="frame" x="34" y="507" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stk-5E-aiF">
+                                <rect key="frame" x="232" y="685" width="110" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sell">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SellButton:" destination="SaX-cA-VGc" eventType="touchUpInside" id="eYS-sq-d4C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvh-HX-NFD">
+                                <rect key="frame" x="54" y="685" width="110" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Buy"/>
+                                <connections>
+                                    <action selector="BuyButton:" destination="SaX-cA-VGc" eventType="touchUpInside" id="zE3-Rt-WAj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sd4-Xo-VPc"/>
@@ -801,14 +819,14 @@
         <image name="TommyTrojan" width="500" height="500"/>
         <image name="TommyTrojan.jpg" width="500" height="500"/>
         <image name="bell" catalog="system" width="64" height="62"/>
-        <image name="creditcard" catalog="system" width="64" height="46"/>
+        <image name="creditcard" catalog="system" width="64" height="44"/>
         <image name="dollarsign.square" catalog="system" width="64" height="56"/>
-        <image name="gear" catalog="system" width="64" height="60"/>
-        <image name="hand.thumbsup" catalog="system" width="60" height="64"/>
-        <image name="info" catalog="system" width="44" height="64"/>
-        <image name="lock.shield" catalog="system" width="60" height="64"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
-        <image name="person" catalog="system" width="64" height="60"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
+        <image name="info" catalog="system" width="46" height="64"/>
+        <image name="lock.shield" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
     </resources>
 </document>
