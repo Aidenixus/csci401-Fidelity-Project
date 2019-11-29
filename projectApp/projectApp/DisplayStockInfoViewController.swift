@@ -148,20 +148,7 @@ class DisplayStockInfoViewController: UIViewController {
         print("stock news done")
         var indentString = ""
         indentString.append("\"")
-        var count = 0
-        for i in self.stockNews[0].text! // for indentation purpose
-        {
-            indentString.append(i)
-            count = count+1
-            if count > 30
-            {
-                if(i == " ")
-                {
-                    indentString.append("\r\n")
-                    count = 0
-                }
-            }
-        }
+        indentString.append(self.stockNews[0].text!)
         indentString.append("...\"")
 //        print(indentString) // string check
         
