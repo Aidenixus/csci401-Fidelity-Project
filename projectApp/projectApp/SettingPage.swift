@@ -13,11 +13,16 @@ class SettingPage: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBAction func didTapLogout(_ sender: Any) {
         currUser = User()
+        for users in userDatabase{
+            print(users.username + ": ")
+            print(users.balance)
+            print(users.investmentBalance)
+            print("")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

@@ -83,15 +83,19 @@ class DisplayStockInfoViewController: UIViewController {
     
     func GetStockNews(completion: @escaping([StockNews]) ->Void){
         var apiStockNews : [StockNews] = []
+        print("GetNews")
         guard let url = URL(string: "https://stocknewsapi.com/api/v1?tickers=" +  searchInput + "&items=5&token=p6jtyjvg9ipxczr5loks0f3kqd4oqvz25bbglo5m") else {return}
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         guard let dataResponse = data,
                   error == nil else {
                   print(error?.localizedDescription ?? "Response Error")
                   return }
             do{
+                print("GetNews")
                 let websiteResult  = try
-                    JSONDecoder().decode(WebsiteResult.self, from: dataResponse);
+                    JSONDecoder().decode(WebsiteResult.self, from: dataResponse)
+                print("GetNews")
                 if(websiteResult.data.isEmpty){
                     apiStockNews.append(StockNews())
                 }
@@ -101,6 +105,7 @@ class DisplayStockInfoViewController: UIViewController {
                         apiStockNews.append(news)
                     }
                 }
+                print("GetNews")
                 completion(apiStockNews)
              } catch let parsingError {
                 print("Error", parsingError)

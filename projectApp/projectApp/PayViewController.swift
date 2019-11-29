@@ -70,7 +70,67 @@ class PayViewController: UIViewController, UITextViewDelegate {
         }
         let alert = UIAlertController(title: nil, message: messageToShow, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Discard", style: UIAlertAction.Style.destructive, handler: nil ))
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action) in self.dismiss(animated: true, completion: nil)} ))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action) in
+            self.dismiss(animated: true, completion: nil)
+            //1. Modify Local changes
+            //a. Local self balance
+            var currUserBalance = Double(currUser.balance)
+            currUserBalance -= self.payAmount
+            currUser.balance = NSNumber(value: currUserBalance)
+            print(currUser.balance)
+            //b. Local recipient balance
+            print(self.receivedData)
+            var recipientBalance = 0.0
+            for user in userDatabase{
+                if(user.username == self.receivedData){
+                    print("huhu")
+                    recipientBalance = Double(user.balance)
+                    recipientBalance += self.payAmount
+                    user.balance = NSNumber(value: recipientBalance)
+                }
+            }
+            //c. Local investmentBalance
+            var currUserInvest = 0.0
+            if(invest){
+                currUserInvest = Double(currUser.investmentBalance)
+                currUserInvest += self.investAmount
+                currUser.investmentBalance = NSNumber(value: currUserInvest)
+            }
+            //2. Modify database changes
+            //a. Database self balance
+            db.collection("users").document(currUser.username).updateData([
+                "balance": currUserBalance
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("User balance dropped")
+                    }
+                }
+            //b. Database recipient balance
+            db.collection("users").document(self.receivedData).updateData([
+                "balance": recipientBalance
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Recipient balance increased")
+                    }
+                }
+            //c. Database self investment
+            if(invest){
+                db.collection("users").document(currUser.username).updateData([
+                "investmentBalance": currUserInvest
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Investment balance increased")
+                    }
+                }
+            }
+            currProfilePage.viewDidLoad()
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
