@@ -84,6 +84,7 @@ class DisplayStockInfoViewController: UIViewController {
     func GetStockNews(completion: @escaping([StockNews]) ->Void){
         var apiStockNews : [StockNews] = []
         guard let url = URL(string: "https://stocknewsapi.com/api/v1?tickers=" +  searchInput + "&items=5&token=p6jtyjvg9ipxczr5loks0f3kqd4oqvz25bbglo5m") else {return}
+        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         guard let dataResponse = data,
                   error == nil else {
@@ -91,7 +92,7 @@ class DisplayStockInfoViewController: UIViewController {
                   return }
             do{
                 let websiteResult  = try
-                    JSONDecoder().decode(WebsiteResult.self, from: dataResponse);
+                    JSONDecoder().decode(WebsiteResult.self, from: dataResponse)
                 if(websiteResult.data.isEmpty){
                     apiStockNews.append(StockNews())
                 }
@@ -210,6 +211,17 @@ class DisplayStockInfoViewController: UIViewController {
                     self.present(Success, animated: true, completion: nil)
                 }
             }
+            //Update change to database
+            db.collection("users").document(currUser.username).updateData([
+                "stock": currUser.stock,
+                "balance": currUser.balance
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Stock bought")
+                }
+            }
             currProfilePage.viewDidLoad()
         }
         
@@ -272,6 +284,17 @@ class DisplayStockInfoViewController: UIViewController {
                         }
                         self.present(Success, animated: true, completion: nil)
                     }
+                }
+            }
+            //Update user stock and balance in database
+            db.collection("users").document(currUser.username).updateData([
+                "stock": currUser.stock,
+                "balance": currUser.balance
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Stock bought")
                 }
             }
             currProfilePage.viewDidLoad()

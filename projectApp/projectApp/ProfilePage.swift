@@ -15,7 +15,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var stockTableView: UITableView!
     
     override func viewDidLoad() {
-           super.viewDidLoad()
+        super.viewDidLoad()
         stockTableView.delegate = self
         stockTableView.dataSource = self
         
