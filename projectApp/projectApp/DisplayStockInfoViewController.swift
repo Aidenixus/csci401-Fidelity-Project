@@ -146,7 +146,26 @@ class DisplayStockInfoViewController: UIViewController {
             //Maybe add a loading animation
         }
         print("stock news done")
-        news.text = self.stockNews[0].text
+        var indentString = ""
+        indentString.append("\"")
+        var count = 0
+        for i in self.stockNews[0].text! // for indentation purpose
+        {
+            indentString.append(i)
+            count = count+1
+            if count > 30
+            {
+                if(i == " ")
+                {
+                    indentString.append("\r\n")
+                    count = 0
+                }
+            }
+        }
+        indentString.append("...\"")
+//        print(indentString) // string check
+        
+        news.text = indentString
         if self.stockNews[0].image_url != ""{
             let imageURL = self.stockNews[0].image_url
             if let url = URL(string: imageURL!){
