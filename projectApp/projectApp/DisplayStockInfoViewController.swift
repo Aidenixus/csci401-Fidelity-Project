@@ -242,6 +242,7 @@ class DisplayStockInfoViewController: UIViewController {
                 }
             }
             currProfilePage.viewDidLoad()
+            currProfilePage.stockTableView.reloadData()
         }
         
         alertController.addAction(confirmAction)
@@ -317,6 +318,7 @@ class DisplayStockInfoViewController: UIViewController {
                 }
             }
             currProfilePage.viewDidLoad()
+            currProfilePage.stockTableView.reloadData()
         }
         
         alertController.addAction(confirmAction)
@@ -326,7 +328,6 @@ class DisplayStockInfoViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
-        currProfilePage.viewDidLoad()
     }
     
     
