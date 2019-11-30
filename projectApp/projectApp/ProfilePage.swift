@@ -46,7 +46,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         var arrayStock = [String]()
         for i in currUser.stock{
-            arrayStock.append(i.key)
+            arrayStock.append(i.key + "   " + String(i.value))
         }
         
         cell.textLabel?.text = arrayStock[indexPath.row]

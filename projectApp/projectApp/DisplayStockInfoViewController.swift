@@ -146,7 +146,13 @@ class DisplayStockInfoViewController: UIViewController {
             //Maybe add a loading animation
         }
         print("stock news done")
-        news.text = self.stockNews[0].text
+        var indentString = ""
+        indentString.append("\"")
+        indentString.append(self.stockNews[0].text!)
+        indentString.append("...\"")
+//        print(indentString) // string check
+        
+        news.text = indentString
         if self.stockNews[0].image_url != ""{
             let imageURL = self.stockNews[0].image_url
             if let url = URL(string: imageURL!){
@@ -312,6 +318,7 @@ class DisplayStockInfoViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
         currProfilePage.viewDidLoad()
         currProfilePage.stockTableView.reloadData()
+
     }
     
          
