@@ -8,10 +8,14 @@
 
 import UIKit
 
+var currSearchFriendPage = SearchFriendViewController()
+
 class SearchFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userFriendList = []
+        filterFriendList = []
         searchFriendButton.layer.cornerRadius = 10
         friendResultTableView.delegate = self
         friendResultTableView.dataSource = self
@@ -36,8 +40,8 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
         }
         else{
             filterFriendList = []
-            for i in 0..<userFriendList.count{
-                let curr = userFriendList[i] as String
+            for user in userDatabase{
+                let curr = user.username as String
                 if(curr.contains(toSearch)){
                     filterFriendList.append(curr)
                 }
@@ -57,7 +61,25 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
         
         
         cell.textLabel?.text = filterFriendList[indexPath.row]
+        
+        currSearchFriendPage = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        self.performSegue(withIdentifier: "FriendSegue", sender: self)
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // get a reference to the second view controller
+        let friendViewController = segue.destination as! FriendViewController
+        friendViewController.friendName = filterFriendList[(friendResultTableView.indexPathForSelectedRow?.row)!]
+
+        // set a variable in the second view controller with the data to pass
+//        friendViewController.friendName = filterFriendList[(friendResultTableView.indexPathForSelectedRow?.row)!]
     }
     /*
     // MARK: - Navigation

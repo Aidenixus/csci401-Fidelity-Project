@@ -1,12 +1,9 @@
-
 import UIKit
 
 var currProfilePage = ProfilePage()
 
 
 class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-   
     
     @IBOutlet weak var investmentBalanceAmount: UILabel!
     @IBOutlet weak var balanceAmount: UILabel!
@@ -37,7 +34,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         nameLabel.text = currUser.username
         investmentBalanceAmount.text = "$" + currUser.investmentBalance.stringValue
         
-       }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(currUser.stock)

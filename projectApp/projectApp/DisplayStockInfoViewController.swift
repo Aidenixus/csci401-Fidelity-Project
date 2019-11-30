@@ -223,6 +223,7 @@ class DisplayStockInfoViewController: UIViewController {
                 }
             }
             currProfilePage.viewDidLoad()
+            currProfilePage.stockTableView.reloadData()
         }
         
         alertController.addAction(confirmAction)
@@ -235,6 +236,7 @@ class DisplayStockInfoViewController: UIViewController {
     }
     
     @IBAction func SellButton(_ sender: UIButton) {
+        
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
         let stockFailure = UIAlertController(title: "Not possessing enough stock. Try again with a valid amount", message: nil, preferredStyle: UIAlertController.Style.alert)
         let inputFailure = UIAlertController(title: "Please try again with a valid input number", message: nil, preferredStyle: UIAlertController.Style.alert)
@@ -298,6 +300,7 @@ class DisplayStockInfoViewController: UIViewController {
                 }
             }
             currProfilePage.viewDidLoad()
+            currProfilePage.stockTableView.reloadData()
         }
         
         alertController.addAction(confirmAction)
@@ -308,9 +311,10 @@ class DisplayStockInfoViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
         currProfilePage.viewDidLoad()
+        currProfilePage.stockTableView.reloadData()
     }
     
-    
+         
     
     /*
     // MARK: - Navigation
