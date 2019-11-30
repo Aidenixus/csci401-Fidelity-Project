@@ -165,7 +165,29 @@ class DisplayStockInfoViewController: UIViewController {
             }
         }
         
+        
+        
         // Do any additional setup after loading the view.
+        
+        // create tap gesture recognizer
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DisplayStockInfoViewController.imageTapped(gesture:)))
+
+        // add it to the image view;
+        newsImage.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        newsImage.isUserInteractionEnabled = true
+    }
+    
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            print("Image Tapped")
+            //Here you can initiate your new ViewController
+
+            if let url = URL(string: self.stockNews[0].news_url!) {
+                UIApplication.shared.open(url)
+            }
+        }
     }
     
 
