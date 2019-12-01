@@ -21,7 +21,7 @@ class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         recipientsTableView.delegate = self
         recipientsTableView.dataSource = self
-
+        
         // Do any additional setup after loading the view.
     }
     

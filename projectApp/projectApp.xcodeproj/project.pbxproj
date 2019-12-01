@@ -32,6 +32,8 @@
 		DC7E1D252375458E00C403BC /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */; };
 		DC7E1D272375579800C403BC /* Emperor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC7E1D262375579800C403BC /* Emperor.jpg */; };
 		DC9BA2C8236A937600045D74 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BA2C7236A937600045D74 /* SignUpViewController.swift */; };
+		DCBEED8923938C1200E5D046 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBEED8823938C1200E5D046 /* SecurityViewController.swift */; };
+		DCBEED8B23939E6700E5D046 /* FriendSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */; };
 		DCC324BC238E2EDB00CEB631 /* AddRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */; };
 		DCC324BE238E2F1C00CEB631 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC324BD238E2F1C00CEB631 /* PayViewController.swift */; };
 		DCFCBA4F23911EB10019A899 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFCBA4E23911EB10019A899 /* FriendViewController.swift */; };
@@ -94,6 +96,8 @@
 		DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
 		DC7E1D262375579800C403BC /* Emperor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Emperor.jpg; sourceTree = "<group>"; };
 		DC9BA2C7236A937600045D74 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = projectApp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		DCBEED8823938C1200E5D046 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingViewController.swift; sourceTree = "<group>"; };
 		DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipientsViewController.swift; sourceTree = "<group>"; };
 		DCC324BD238E2F1C00CEB631 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		DCFCBA4E23911EB10019A899 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				B8589E152359C9DE000A0196 /* SearchStockViewController.swift */,
 				DC7E1D242375458E00C403BC /* AccountSettingViewController.swift */,
 				DCFCBA4E23911EB10019A899 /* FriendViewController.swift */,
+				DCBEED8823938C1200E5D046 /* SecurityViewController.swift */,
+				DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -483,8 +489,10 @@
 				B86264D6235041A600DE3654 /* ViewController.swift in Sources */,
 				DF7C34592359AE6B005684D8 /* BankAccountTableViewController.swift in Sources */,
 				B86265022350427200DE3654 /* LoginViewController.swift in Sources */,
+				DCBEED8B23939E6700E5D046 /* FriendSettingViewController.swift in Sources */,
 				B86264D2235041A600DE3654 /* AppDelegate.swift in Sources */,
 				DC76EA37235986DA00F92066 /* ProfilePage.swift in Sources */,
+				DCBEED8923938C1200E5D046 /* SecurityViewController.swift in Sources */,
 				DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */,
 				DCFCBA4F23911EB10019A899 /* FriendViewController.swift in Sources */,
 				DCC324BE238E2F1C00CEB631 /* PayViewController.swift in Sources */,

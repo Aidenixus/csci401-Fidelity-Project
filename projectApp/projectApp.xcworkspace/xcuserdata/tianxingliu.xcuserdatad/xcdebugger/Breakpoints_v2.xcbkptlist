@@ -228,5 +228,237 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F93A82A4-6813-4AFD-AE72-3424671D43EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectApp/SettingPage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "didTapLogout(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectApp/SecurityViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "SecurityViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - 28f8b87efabedfb6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - 6295ef11d3708baa"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - adc268db598240b5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - bfd6732fb64ecb17"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - d88dfadf49e9799"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; projectApp.SecurityViewController"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "1C22537F-5333-4149-B5A1-7F8915EE9EFF - 476f86d1ed429124"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;projectApp.SecurityViewController&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "214">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projectApp/SecurityViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SecurityViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - 28f8b87efabedfb6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - 6295ef11d3708baa"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - adc268db598240b5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - bfd6732fb64ecb17"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.newPasswordField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - d88dfadf49e9799"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; projectApp.SecurityViewController"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "0D6C165E-3A84-4A34-8B5E-693BA1E0F8F7 - 476f86d1ed429124"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "projectApp.SecurityViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;projectApp.SecurityViewController&gt;"
+                  moduleName = "projectApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianxingliu/CSCI401-Fidelity-Project/projectApp/projectApp/SecurityViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "214">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
