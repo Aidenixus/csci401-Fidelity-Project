@@ -33,7 +33,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         balanceAmount.text = "$" + currUser.balance.stringValue
         nameLabel.text = currUser.username
         investmentBalanceAmount.text = "$" + currUser.investmentBalance.stringValue
-        
+        currProfilePage = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +51,7 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         cell.textLabel?.text = arrayStock[indexPath.row]
         
-        currProfilePage = self
+        
         
         return cell
     }
