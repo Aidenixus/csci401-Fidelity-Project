@@ -218,7 +218,7 @@ class DisplayStockInfoViewController: UIViewController {
                 }
             }
             //Update change to database
-            db.collection("users").document(currUser.username).updateData([
+        db.collection("users").document(currUser.username).updateData([
                 "stock": currUser.stock,
                 "balance": currUser.balance
             ]) { err in
@@ -227,7 +227,7 @@ class DisplayStockInfoViewController: UIViewController {
                 } else {
                     print("Stock bought")
                 }
-            }
+            }            
             currProfilePage.viewDidLoad()
             currProfilePage.stockTableView.reloadData()
         }
