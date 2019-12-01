@@ -22,7 +22,6 @@
 		CA4DAEF18223E7ACF430E0C5 /* Pods_projectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7691092800074E0F76EF47 /* Pods_projectApp.framework */; };
 		D150B7486A92B562C50DD942 /* Pods_projectApp_projectAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585E528CBA7C81E8E6B2CB21 /* Pods_projectApp_projectAppUITests.framework */; };
 		DC20835E2373728E00824684 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC20835D2373728E00824684 /* GoogleService-Info.plist */; };
-		DC34012623810BFF001CBB5E /* StockInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC34012423810BFF001CBB5E /* StockInfoViewController.swift */; };
 		DC34012723810BFF001CBB5E /* DisplayStockInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC34012523810BFF001CBB5E /* DisplayStockInfoViewController.swift */; };
 		DC76EA3023597CE400F92066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA2E23597CE400F92066 /* Main.storyboard */; };
 		DC76EA322359830C00F92066 /* TommyTrojan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC76EA312359830C00F92066 /* TommyTrojan.jpg */; };
@@ -87,7 +86,6 @@
 		C8488325575887746E5753DA /* Pods-projectAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectAppTests.debug.xcconfig"; path = "Target Support Files/Pods-projectAppTests/Pods-projectAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D46D55760C3578DD0E57947D /* Pods-projectApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectApp.debug.xcconfig"; path = "Target Support Files/Pods-projectApp/Pods-projectApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DC20835D2373728E00824684 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "projectApp/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DC34012423810BFF001CBB5E /* StockInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockInfoViewController.swift; sourceTree = "<group>"; };
 		DC34012523810BFF001CBB5E /* DisplayStockInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayStockInfoViewController.swift; sourceTree = "<group>"; };
 		DC76EA2F23597CE400F92066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC76EA312359830C00F92066 /* TommyTrojan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TommyTrojan.jpg; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				DCC324BD238E2F1C00CEB631 /* PayViewController.swift */,
 				DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */,
 				DC34012523810BFF001CBB5E /* DisplayStockInfoViewController.swift */,
-				DC34012423810BFF001CBB5E /* StockInfoViewController.swift */,
 				DC20835D2373728E00824684 /* GoogleService-Info.plist */,
 				B8E8B70C235A463E00E38B02 /* appAsset */,
 				DC9BA2C7236A937600045D74 /* SignUpViewController.swift */,
@@ -502,7 +499,6 @@
 				DC9BA2C8236A937600045D74 /* SignUpViewController.swift in Sources */,
 				B8589E162359C9DE000A0196 /* SearchStockViewController.swift in Sources */,
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
-				DC34012623810BFF001CBB5E /* StockInfoViewController.swift in Sources */,
 				DCD7AACC2393B52B007D6446 /* AddCardViewController.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				DC34012723810BFF001CBB5E /* DisplayStockInfoViewController.swift in Sources */,
