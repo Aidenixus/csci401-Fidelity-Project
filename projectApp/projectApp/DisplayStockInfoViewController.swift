@@ -113,8 +113,12 @@ class DisplayStockInfoViewController: UIViewController {
 
 
     @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var newsImage1: UIImageView!
+    @IBOutlet weak var newsImage2: UIImageView!
     
     @IBOutlet weak var news: UILabel!
+    @IBOutlet weak var news1: UILabel!
+    @IBOutlet weak var news2: UILabel!
     
     @IBOutlet weak var stockNameLabel: UILabel!
     
@@ -165,7 +169,70 @@ class DisplayStockInfoViewController: UIViewController {
             }
         }
         
+        news1.text = self.stockNews[1].text
+        if self.stockNews[1].image_url != ""{
+            let imageURL = self.stockNews[1].image_url
+            if let url = URL(string: imageURL!) {
+                do {
+                    let data = try Data(contentsOf: url)
+                    self.newsImage1.image = UIImage(data: data)
+                } catch let err{
+                    print("Error : \(err.localizedDescription)")
+                }
+            }
+        }
+
+        news2.text = self.stockNews[2].text
+        if self.stockNews[2].image_url != "" {
+            let imageURL = self.stockNews[2].image_url
+            if let url = URL(string: imageURL!) {
+                do {
+                    let data = try Data(contentsOf: url)
+                    self.newsImage2.image = UIImage(data: data)
+                } catch let err {
+                    print("Error : \(err.localizedDescription)")
+                }
+            }
+        }
+        
+        
+        
         // Do any additional setup after loading the view.
+        
+        let images = [newsImage, newsImage1, newsImage2]
+        for i in images {
+            // create tap gesture recognizer
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DisplayStockInfoViewController.imageTapped(gesture:)))
+            // add it to the image view
+            i!.addGestureRecognizer(tapGesture)
+            // make sure imageView can be interacted with by user
+            i!.isUserInteractionEnabled = true
+        }
+    }
+    
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            
+            let image: UIImageView = gesture.view as! UIImageView
+            
+            
+            print("Image Tapped: \(gesture.view!), tag: \(String(describing: image.restorationIdentifier))")
+            //Here you can initiate your new ViewController
+            var index = 0
+            let imageID = image.restorationIdentifier
+            if (imageID == "image0") {
+                index = 0
+            } else if (imageID == "image1") {
+                index = 1
+            } else if (imageID == "image2") {
+                index = 2
+            }
+           
+            if let url = URL(string: self.stockNews[index].news_url!) {
+                UIApplication.shared.open(url)
+            }
+        }
     }
     
 
