@@ -57,7 +57,7 @@ class DisplayStockInfoViewController: UIViewController {
     {
         var apiStockPrice = 0.0
         var apiStockName = ""
-        var searchURL = "https://financialmodelingprep.com/api/v3/stock/real-time-price/" + searchInput
+        let searchURL = "https://financialmodelingprep.com/api/v3/stock/real-time-price/" + searchInput
         print(searchURL)
         guard let url = URL(string: searchURL) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -152,10 +152,26 @@ class DisplayStockInfoViewController: UIViewController {
         print("stock news done")
         var indentString = ""
         indentString.append("\"")
-        indentString.append(self.stockNews[0].text!)
+        // hardcoded part: each line has approximately 15 characters before wrapping
+        var count = 0;
+        for i in self.stockNews[0].text!
+        {
+            if(count > 50) {
+                if i == " "
+                {
+                    break
+                }
+            }
+            count += 1;
+            if(i == "\"")
+            {
+                indentString.append("'")
+                continue
+            }
+            indentString.append(i)
+        }
         indentString.append("...\"")
-//        print(indentString) // string check
-        
+        print("OKOK!" + indentString)
         news.text = indentString
         if self.stockNews[0].image_url != ""{
             let imageURL = self.stockNews[0].image_url
@@ -169,7 +185,28 @@ class DisplayStockInfoViewController: UIViewController {
             }
         }
         
-        news1.text = self.stockNews[1].text
+        indentString = ""
+        indentString.append("\"")
+        // hardcoded part: each line has approximately 15 characters before wrapping
+        count = 0;
+        for i in self.stockNews[1].text!
+        {
+            if(count > 50) {
+                if i == " "
+                {
+                    break
+                }
+            }
+            count += 1;
+            if(i == "\"")
+            {
+                indentString.append("'")
+                continue
+            }
+            indentString.append(i)
+        }
+        indentString.append("...\"")
+        news1.text = indentString
         if self.stockNews[1].image_url != ""{
             let imageURL = self.stockNews[1].image_url
             if let url = URL(string: imageURL!) {
@@ -182,7 +219,28 @@ class DisplayStockInfoViewController: UIViewController {
             }
         }
 
-        news2.text = self.stockNews[2].text
+        indentString = ""
+        indentString.append("\"")
+        // hardcoded part: each line has approximately 15 characters before wrapping
+        count = 0;
+        for i in self.stockNews[2].text!
+        {
+            if(count > 50) {
+                if i == " "
+                {
+                    break
+                }
+            }
+            count += 1;
+            if(i == "\"")
+            {
+                indentString.append("'")
+                continue
+            }
+            indentString.append(i)
+        }
+        indentString.append("...\"")
+        news2.text = indentString
         if self.stockNews[2].image_url != "" {
             let imageURL = self.stockNews[2].image_url
             if let url = URL(string: imageURL!) {
