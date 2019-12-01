@@ -14,9 +14,10 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var friendStockTableView: UITableView!
     
-    @IBOutlet weak var addFriendButton: UIButton!
+    @IBOutlet weak var modifyFriendButton: UIButton!
     var friendName = ""
     var currFriend = User()
+    var isFriend = false
     override func viewDidLoad() {
         super.viewDidLoad()
         print(friendName)
@@ -43,10 +44,18 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
         ProfilePic.clipsToBounds = true
         ProfilePic.contentMode = UIView.ContentMode.scaleAspectFit
         nameLabel.text = currFriend.username
+        
+        if isFriend {
+            
+            modifyFriendButton.isHidden = true
+        }
+        
 //
 //
     }
-    @IBAction func didTapAddFriendButton(_ sender: Any) {
+    @IBAction func didTapModifyFriendButton(_ sender: Any) {
+        
+        
         currUser.friends.append(currFriend.username)
         db.collection("users").document(currUser.username).updateData([
             "friends": currUser.friends
@@ -54,11 +63,13 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let err = err {
                 print("Error updating document: \(err)")
             } else {
-                print("Friend added")
+                print("Friend Added")
             }
         }
-        
-        //TODO: Unexpectedlly found nil while reloading empty tableview
+        let alert = UIAlertController(title: "Friend Added.", message: nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
         currSearchFriendPage.viewDidLoad()
         
     }

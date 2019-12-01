@@ -17,6 +17,9 @@
 		B86264E9235041A700DE3654 /* projectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264E8235041A700DE3654 /* projectAppTests.swift */; };
 		B86264F4235041A700DE3654 /* projectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86264F3235041A700DE3654 /* projectAppUITests.swift */; };
 		B86265022350427200DE3654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86265012350427200DE3654 /* LoginViewController.swift */; };
+		B894D416239478DF00DBC0C3 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D413239478DF00DBC0C3 /* AddCardViewController.swift */; };
+		B894D417239478DF00DBC0C3 /* FriendSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D414239478DF00DBC0C3 /* FriendSettingViewController.swift */; };
+		B894D418239478DF00DBC0C3 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894D415239478DF00DBC0C3 /* SecurityViewController.swift */; };
 		B8E8B70A235A459B00E38B02 /* Fidelity Icon (Retro) WF.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */; };
 		B8E8B70B235A459B00E38B02 /* Fidelity Icon (Retro) BF.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */; };
 		CA4DAEF18223E7ACF430E0C5 /* Pods_projectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7691092800074E0F76EF47 /* Pods_projectApp.framework */; };
@@ -78,6 +81,9 @@
 		B86264F3235041A700DE3654 /* projectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectAppUITests.swift; sourceTree = "<group>"; };
 		B86264F5235041A700DE3654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86265012350427200DE3654 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B894D413239478DF00DBC0C3 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		B894D414239478DF00DBC0C3 /* FriendSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSettingViewController.swift; sourceTree = "<group>"; };
+		B894D415239478DF00DBC0C3 /* SecurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		B8E8B708235A459B00E38B02 /* Fidelity Icon (Retro) WF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fidelity Icon (Retro) WF.png"; sourceTree = "<group>"; };
 		B8E8B709235A459B00E38B02 /* Fidelity Icon (Retro) BF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fidelity Icon (Retro) BF.png"; sourceTree = "<group>"; };
 		C8488325575887746E5753DA /* Pods-projectAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectAppTests.debug.xcconfig"; path = "Target Support Files/Pods-projectAppTests/Pods-projectAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 		B86264D0235041A600DE3654 /* projectApp */ = {
 			isa = PBXGroup;
 			children = (
+				B894D413239478DF00DBC0C3 /* AddCardViewController.swift */,
+				B894D414239478DF00DBC0C3 /* FriendSettingViewController.swift */,
+				B894D415239478DF00DBC0C3 /* SecurityViewController.swift */,
 				DCC324BD238E2F1C00CEB631 /* PayViewController.swift */,
 				DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */,
 				DC34012523810BFF001CBB5E /* DisplayStockInfoViewController.swift */,
@@ -485,14 +494,17 @@
 				DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */,
 				DCFCBA4F23911EB10019A899 /* FriendViewController.swift in Sources */,
 				DCC324BE238E2F1C00CEB631 /* PayViewController.swift in Sources */,
+				B894D416239478DF00DBC0C3 /* AddCardViewController.swift in Sources */,
 				DC9BA2C8236A937600045D74 /* SignUpViewController.swift in Sources */,
 				B8589E162359C9DE000A0196 /* SearchStockViewController.swift in Sources */,
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
+				B894D417239478DF00DBC0C3 /* FriendSettingViewController.swift in Sources */,
 				DC34012723810BFF001CBB5E /* DisplayStockInfoViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
 				DC7E1D252375458E00C403BC /* AccountSettingViewController.swift in Sources */,
 				DCC324BC238E2EDB00CEB631 /* AddRecipientsViewController.swift in Sources */,
+				B894D418239478DF00DBC0C3 /* SecurityViewController.swift in Sources */,
 				DC76EA36235986DA00F92066 /* SettingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

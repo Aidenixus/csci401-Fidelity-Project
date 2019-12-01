@@ -393,7 +393,7 @@ class DisplayStockInfoViewController: UIViewController {
         alertController.addTextField { textField in
             textField.placeholder = "Type in the amount that you'd like to sell"
             textField.keyboardType = .numberPad  // it can only take in numbers now
-        }
+        } 
         
         var amount = 0
         

@@ -30,7 +30,16 @@ class SignUpViewController: UIViewController {
             
         let db = Firestore.firestore()
          //Add a new document with a generated ID
-
+        
+        for user in userDatabase{
+            if user.username == username {
+                let sameUserAlert = UIAlertController(title: "Username already taken", message: nil, preferredStyle: UIAlertController.Style.alert)
+                sameUserAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in sameUserAlert.dismiss(animated: true, completion: nil)
+                 }))
+                self.present(sameUserAlert, animated: true, completion: nil)
+                return
+            }
+        }
         
         let failureAlert = UIAlertController(title: "Password does not match", message: nil, preferredStyle: UIAlertController.Style.alert)
         
@@ -52,21 +61,25 @@ class SignUpViewController: UIViewController {
             print("No")
         }
         if(verified){
-            //TODO: Add user to current user
-            //Load the loaded user
-            var ref: DocumentReference? = nil
-            ref = db.collection("users").addDocument(data: [
+            //TODO: Add user to current user, since we have to re-login the page, don't need to set currUser
+            var newUser = User()
+            newUser.username = username
+            newUser.password = password
+            userDatabase.append(newUser)
+//            currUser = newUser
+            db.collection("users").document(username).setData([
                 "name": username,
                 "password": password,
                 "balance":  0,
-                "stock": [],
+                "investmentBalance": 0,
                 "friends": [],
-                "cards": []
-            ]) { err in
+                "cards": [],
+                "stock": [String: Int]()
+                ]){ err in
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
-                    print("Document added with ID: \(ref!.documentID)")
+                    print("Document added with ID: ", username)
                 }
             }
             self.present(SuccessAlert, animated: true, completion: nil)
