@@ -36,6 +36,7 @@
 		DCBEED8B23939E6700E5D046 /* FriendSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */; };
 		DCC324BC238E2EDB00CEB631 /* AddRecipientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */; };
 		DCC324BE238E2F1C00CEB631 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC324BD238E2F1C00CEB631 /* PayViewController.swift */; };
+		DCD7AACC2393B52B007D6446 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7AACB2393B52B007D6446 /* AddCardViewController.swift */; };
 		DCFCBA4F23911EB10019A899 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFCBA4E23911EB10019A899 /* FriendViewController.swift */; };
 		DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF56513C23583F66006049E7 /* TabBarViewController.swift */; };
 		DF7C34572359A498005684D8 /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C34562359A498005684D8 /* SearchFriendViewController.swift */; };
@@ -100,6 +101,7 @@
 		DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingViewController.swift; sourceTree = "<group>"; };
 		DCC324BB238E2EDB00CEB631 /* AddRecipientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipientsViewController.swift; sourceTree = "<group>"; };
 		DCC324BD238E2F1C00CEB631 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		DCD7AACB2393B52B007D6446 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		DCFCBA4E23911EB10019A899 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		DF56513C23583F66006049E7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DF7C34562359A498005684D8 /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				DCFCBA4E23911EB10019A899 /* FriendViewController.swift */,
 				DCBEED8823938C1200E5D046 /* SecurityViewController.swift */,
 				DCBEED8A23939E6700E5D046 /* FriendSettingViewController.swift */,
+				DCD7AACB2393B52B007D6446 /* AddCardViewController.swift */,
 			);
 			path = projectApp;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				B8589E162359C9DE000A0196 /* SearchStockViewController.swift in Sources */,
 				DC76EA38235986DA00F92066 /* StockDetailPage.swift in Sources */,
 				DC34012623810BFF001CBB5E /* StockInfoViewController.swift in Sources */,
+				DCD7AACC2393B52B007D6446 /* AddCardViewController.swift in Sources */,
 				DF56513D23583F66006049E7 /* TabBarViewController.swift in Sources */,
 				DC34012723810BFF001CBB5E /* DisplayStockInfoViewController.swift in Sources */,
 				B86264D4235041A600DE3654 /* SceneDelegate.swift in Sources */,
