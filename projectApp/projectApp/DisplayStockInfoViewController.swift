@@ -171,7 +171,7 @@ class DisplayStockInfoViewController: UIViewController {
             indentString.append(i)
         }
         indentString.append("...\"")
-        print("OKOK!" + indentString)
+//        print("OKOK!" + indentString)
         news.text = indentString
         if self.stockNews[0].image_url != ""{
             let imageURL = self.stockNews[0].image_url
@@ -317,6 +317,16 @@ class DisplayStockInfoViewController: UIViewController {
         let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
             guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
             print("\(String(describing: textField.text))")
+            // can't allow 0.5 to appear
+            for i in textField.text!
+            {
+                if i == "."
+                {
+                    self.present(inputFailure, animated: true, completion: nil)
+                    return
+                }
+            }
+            
             amount = (textField.text! as NSString).integerValue
             //check if it can actually do the buying here
             if amount<0  //bad input
@@ -390,6 +400,17 @@ class DisplayStockInfoViewController: UIViewController {
         let confirmAction = UIAlertAction(title: "OK", style: .default) { [weak alertController] _ in
             guard let alertController = alertController, let textField = alertController.textFields?.first else { return }
             print("\(String(describing: textField.text))")
+            
+            // can't allow 0.5 to appear
+            for i in textField.text!
+            {
+                if i == "."
+                {
+                    self.present(inputFailure, animated: true, completion: nil)
+                    return
+                }
+            }
+            
             amount = (textField.text! as NSString).integerValue
             //check if it can actually do the buying here
             if amount<0  // bad input
