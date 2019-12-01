@@ -5,7 +5,6 @@
 //  Created by Hiro Zhu on 10/14/19.
 //  Copyright © 2019 Hiro Zhu. All rights reserved.
 //
-var currBankAccountPage = BankAccountViewController()
 
 import UIKit
 
@@ -20,7 +19,7 @@ class BankAccountViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         bankAccountTableView.delegate = self
         bankAccountTableView.dataSource = self
-        currBankAccountPage = self
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
