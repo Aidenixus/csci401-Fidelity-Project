@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
         }))
 
         if (!verified) {
-            print("Password is not verified")
+            print("Password does not verified")
             self.present(alert, animated: true, completion: nil)
         }
         else {

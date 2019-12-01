@@ -10,8 +10,6 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var ProfilePic: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var stockTableView: UITableView!
-    @IBOutlet weak var ProfileTopButton: UIBarButtonItem!
-    @IBOutlet weak var PayTopButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +34,6 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         nameLabel.text = currUser.username
         investmentBalanceAmount.text = "$" + currUser.investmentBalance.stringValue
         currProfilePage = self
-        // changing font
-        ProfileTopButton.setTitleTextAttributes([
-            NSAttributedString.Key.font: UIFont(name: "Futura", size: 17.0)!,
-            NSAttributedString.Key.foregroundColor: UIColor.black],
-        for: .normal)
-        PayTopButton.setTitleTextAttributes([
-            NSAttributedString.Key.font: UIFont(name: "Menlo", size: 17.0)!,
-            NSAttributedString.Key.foregroundColor: UIColor.black],
-        for: .normal)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,13 +12,10 @@ let recipients = currUser.friends
 
 class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var ProfileTopButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    
     @IBAction func didTapCancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    
     @IBOutlet weak var recipientsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +23,6 @@ class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITabl
         recipientsTableView.dataSource = self
         
         // Do any additional setup after loading the view.
-        ProfileTopButton.setTitleTextAttributes([
-            NSAttributedString.Key.font: UIFont(name: "Futura", size: 17.0)!,
-            NSAttributedString.Key.foregroundColor: UIColor.black],
-        for: .normal)
-        cancelButton.setTitleTextAttributes([
-            NSAttributedString.Key.font: UIFont(name: "Menlo", size: 17.0)!,
-            NSAttributedString.Key.foregroundColor: UIColor.black],
-        for: .normal)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

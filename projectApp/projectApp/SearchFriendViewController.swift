@@ -14,37 +14,32 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userFriendList = []
-        filterFriendList = []
+        usernameList = []
+        filteredList = []
         searchFriendButton.layer.cornerRadius = 10
         friendResultTableView.delegate = self
         friendResultTableView.dataSource = self
         friendResultTableView.isHidden = false
-        for friends in currUser.friends{
-            userFriendList.append(friends)
+        for user in userDatabase{
+            usernameList.append(user.username)
         }
-        filterFriendList = userFriendList
         // Do any additional setup after loading the view.
     }
     
-    var userFriendList = [String]() //friend list
-    var filterFriendList = [String]() //The actual list to be presented based on search query
+    var usernameList = [String]() //friend list
+    var filteredList = [String]() //The actual list to be presented based on search query
+    var isFriend = false
     
     @IBOutlet weak var searchFriendButton: UIButton!
     
     @IBAction func didTapSearchButton(_ sender: UIButton) {
         let toSearch: String = searchBar.text ?? ""
         print(toSearch)
-        if(toSearch == ""){
-            filterFriendList = userFriendList
-        }
-        else{
-            filterFriendList = []
-            for user in userDatabase{
-                let curr = user.username as String
-                if(curr.contains(toSearch)){
-                    filterFriendList.append(curr)
-                }
+        filteredList = []
+        for user in userDatabase{
+            let curr = user.username as String
+            if(curr.contains(toSearch)){
+                filteredList.append(curr)
             }
         }
         friendResultTableView.reloadData()
@@ -53,22 +48,22 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var friendResultTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filterFriendList.count
+        return filteredList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = friendResultTableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath)
         
         
-        cell.textLabel?.text = filterFriendList[indexPath.row]
+        cell.textLabel?.text = filteredList[indexPath.row]
         
         currSearchFriendPage = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         self.performSegue(withIdentifier: "FriendSegue", sender: self)
+        
     }
     
     // This function is called before the segue
@@ -76,10 +71,18 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
 
         // get a reference to the second view controller
         let friendViewController = segue.destination as! FriendViewController
-        friendViewController.friendName = filterFriendList[(friendResultTableView.indexPathForSelectedRow?.row)!]
-
-        // set a variable in the second view controller with the data to pass
-//        friendViewController.friendName = filterFriendList[(friendResultTableView.indexPathForSelectedRow?.row)!]
+        
+        friendViewController.friendName = filteredList[(friendResultTableView.indexPathForSelectedRow?.row)!]
+        
+        for friend in currUser.friends{
+            if(filteredList[(friendResultTableView.indexPathForSelectedRow?.row)!] == friend){
+                isFriend = true
+                break
+            }
+        }
+        friendViewController.isFriend = self.isFriend
+        filteredList = []
+        friendResultTableView.reloadData()
     }
     /*
     // MARK: - Navigation
