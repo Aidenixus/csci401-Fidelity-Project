@@ -30,10 +30,10 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        if(currUser.username == "TommyTrojan"){
+        if(currFriend.username == "TommyTrojan"){
             ProfilePic.image = UIImage(named: "TommyTrojan")
         }
-        else if (currUser.username == "PeterMin"){
+        else if (currFriend.username == "PeterMin"){
             ProfilePic.image = UIImage(named: "three")
         }
         else{
