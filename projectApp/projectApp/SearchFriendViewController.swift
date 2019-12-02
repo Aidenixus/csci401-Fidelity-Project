@@ -68,15 +68,19 @@ class SearchFriendViewController: UIViewController, UITableViewDelegate, UITable
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        self.isFriend = false
         // get a reference to the second view controller
         let friendViewController = segue.destination as! FriendViewController
+        var friendHuhu = filteredList[(friendResultTableView.indexPathForSelectedRow?.row)!]
+        print("Friend huhu: ", friendHuhu)
         
         friendViewController.friendName = filteredList[(friendResultTableView.indexPathForSelectedRow?.row)!]
         
+        
+        
         for friend in currUser.friends{
             if(filteredList[(friendResultTableView.indexPathForSelectedRow?.row)!] == friend){
-                isFriend = true
+                self.isFriend = true
                 break
             }
         }

@@ -71,6 +71,8 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }))
         self.present(alert, animated: true, completion: nil)
         currSearchFriendPage.viewDidLoad()
+        isFriend = true
+        self.viewDidLoad()
         
     }
 //

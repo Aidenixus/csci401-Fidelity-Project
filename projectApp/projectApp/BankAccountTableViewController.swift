@@ -21,6 +21,10 @@ class BankAccountViewController: UIViewController, UITableViewDelegate, UITableV
         bankAccountTableView.delegate = self
         bankAccountTableView.dataSource = self
         currBankAccountPage = self
+        cancelButton.setTitleTextAttributes([
+            NSAttributedString.Key.font: UIFont(name: "Futura", size: 17.0)!,
+            NSAttributedString.Key.foregroundColor: UIColor.black],
+        for: .normal)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

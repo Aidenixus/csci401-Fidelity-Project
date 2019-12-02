@@ -12,8 +12,8 @@ let recipients = currUser.friends
 
 class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var ProfileTopButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var ProfileTopButton: UIBarButtonItem!
     
     @IBAction func didTapCancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

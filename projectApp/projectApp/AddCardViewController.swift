@@ -17,10 +17,14 @@ class AddCardViewController: UIViewController {
     }
     
     @IBOutlet weak var cardNumberInput: UITextField!
+    @IBOutlet weak var Exp1: UITextField!
+    @IBOutlet weak var Exp2: UITextField!
+    @IBOutlet weak var CVV: UITextField!
+    @IBOutlet weak var PostalCode: UITextField!
     
     @IBAction func didTapAddCardButton(_ sender: Any) {
         let cardNumber = cardNumberInput.text
-        if(cardNumber?.count != 16){
+        if((cardNumber?.count != 16) || (Exp1.text?.count != 2) || (Exp2.text?.count != 2) || (CVV.text?.count != 3) || (PostalCode.text?.count != 5)) {
             let alert = UIAlertController(title: "Invalid Input.", message: nil, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
             }))
