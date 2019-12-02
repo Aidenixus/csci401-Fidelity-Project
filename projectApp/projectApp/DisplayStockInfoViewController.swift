@@ -123,6 +123,12 @@ class DisplayStockInfoViewController: UIViewController {
     @IBOutlet weak var stockNameLabel: UILabel!
     
     @IBOutlet weak var stockPriceLabel: UILabel!
+    @IBOutlet weak var BuyButton: UIButton!
+    @IBOutlet weak var SellButton: UIButton!
+    
+    @IBOutlet weak var StockPricePrefix: UILabel!
+    
+    @IBOutlet weak var NewsAbstractPrefix: UILabel!
     
     var stockName : String = ""
     var stockPrice : double_t = 0.0
@@ -153,6 +159,27 @@ class DisplayStockInfoViewController: UIViewController {
         var indentString = ""
         indentString.append("\"")
         // hardcoded part: each line has approximately 15 characters before wrapping
+        
+        // if searched term is incorrect
+        if (self.stockNews.count < 3)
+        {
+            stockNameLabel.text = "Invalid Inquiry!"
+            newsImage.isHidden = true;
+            newsImage1.isHidden = true;
+            newsImage2.isHidden = true;
+            
+            news.isHidden = true;
+            news1.isHidden = true;
+            news2.isHidden = true;
+            
+            stockPriceLabel.isHidden = true;
+            BuyButton.isHidden = true;
+            SellButton.isHidden = true;
+            StockPricePrefix.isHidden = true;
+            NewsAbstractPrefix.isHidden = true;
+            return
+        }
+        
         var count = 0;
         for i in self.stockNews[0].text!
         {

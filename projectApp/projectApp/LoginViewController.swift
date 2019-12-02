@@ -88,6 +88,7 @@ class LoginViewController: UIViewController {
             print(users.username, ", ", users.password)
             if(self.usernameInput == users.username && self.passwordInput == users.password){
                 currUser = users //The current user for this session is set
+                recipients = currUser.friends
                 verified = true
                 break
             }

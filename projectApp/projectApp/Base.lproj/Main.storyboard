@@ -685,6 +685,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="WPq-er-sqr"/>
                     <connections>
+                        <outlet property="BuyButton" destination="Vvh-HX-NFD" id="ECb-Zg-ZBj"/>
+                        <outlet property="NewsAbstractPrefix" destination="NAi-ts-Ubp" id="fPN-aV-Qcp"/>
+                        <outlet property="SellButton" destination="stk-5E-aiF" id="bVe-h2-Rs4"/>
+                        <outlet property="StockPricePrefix" destination="a1q-5u-gEg" id="0CD-Ub-tBk"/>
                         <outlet property="news" destination="9eH-Gi-dIf" id="t5U-RI-v4f"/>
                         <outlet property="news1" destination="bzB-Oh-e2z" id="eEI-4w-9jD"/>
                         <outlet property="news2" destination="uOt-EK-Biw" id="Phw-hW-OTP"/>

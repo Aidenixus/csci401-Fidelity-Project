@@ -8,7 +8,7 @@
 
 import UIKit
 
-let recipients = currUser.friends
+var recipients = currUser.friends
 
 class AddRecipientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

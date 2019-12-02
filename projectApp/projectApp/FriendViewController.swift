@@ -69,6 +69,7 @@ class FriendViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print("Friend Added")
             }
         }
+        recipients = currUser.friends
         let alert = UIAlertController(title: "Friend Added.", message: nil, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (action) in alert.dismiss(animated: true, completion: nil)
         }))
