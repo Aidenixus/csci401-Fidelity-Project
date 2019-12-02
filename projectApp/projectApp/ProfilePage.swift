@@ -21,8 +21,11 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if(currUser.username == "TommyTrojan"){
             ProfilePic.image = UIImage(named: "TommyTrojan")
         }
-        else{
+        else if (currUser.username == "PeterMin"){
             ProfilePic.image = UIImage(named: "three")
+        }
+        else{
+            ProfilePic.image = UIImage(named: "question")
         }
         
         ProfilePic.layer.borderWidth = 1
@@ -31,10 +34,49 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         ProfilePic.layer.cornerRadius = ProfilePic.frame.height/2
         ProfilePic.clipsToBounds = true
         ProfilePic.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        var balanceString = ""
+        var investmentString = ""
+        var count = 0
+        var flag = false;
+        for i in currUser.balance.stringValue
+        {
+            if(count>=2)
+            {
+                break;
+            }
+            if(flag==true)
+            {
+                count+=1;
+            }
+            balanceString.append(i)
+            if(i==".")
+            {
+                flag = true;
+            }
+        }
+        count = 0
+        flag = false;
+        for i in currUser.investmentBalance.stringValue
+        {
+            if(count>=2)
+            {
+                break;
+            }
+            if(flag==true)
+            {
+                count+=1;
+            }
+            investmentString.append(i)
+            if(i==".")
+            {
+                flag = true;
+            }
+        }
            
-        balanceAmount.text = "$" + currUser.balance.stringValue
+        balanceAmount.text = "$" + balanceString
         nameLabel.text = currUser.username
-        investmentBalanceAmount.text = "$" + currUser.investmentBalance.stringValue
+        investmentBalanceAmount.text = "$" + investmentString
         currProfilePage = self
         // changing font
         ProfileTopButton.setTitleTextAttributes([

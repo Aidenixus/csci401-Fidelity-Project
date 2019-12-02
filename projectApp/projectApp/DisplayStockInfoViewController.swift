@@ -335,13 +335,13 @@ class DisplayStockInfoViewController: UIViewController {
             }
             else
             {
-                if Double(amount)*self.stockPrice > currUser.balance.doubleValue // can't make the purchase, not enough money
+                if Double(amount)*self.stockPrice > currUser.investmentBalance.doubleValue // can't make the purchase, not enough money
                 {
                     self.present(balanceFailure, animated: true, completion: nil)
                 }
                 else
                 {
-                    currUser.balance = NSNumber(value: currUser.balance.doubleValue - Double(amount)*self.stockPrice) // making the purchase
+                    currUser.investmentBalance = NSNumber(value: currUser.investmentBalance.doubleValue - Double(amount)*self.stockPrice) // making the purchase
                     if currUser.stock[self.stockName] == nil{
                         currUser.stock[self.stockName] = amount
                     }
@@ -355,7 +355,7 @@ class DisplayStockInfoViewController: UIViewController {
             //Update change to database
         db.collection("users").document(currUser.username).updateData([
                 "stock": currUser.stock,
-                "balance": currUser.balance
+                "investmentBalance": currUser.investmentBalance
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
@@ -431,7 +431,7 @@ class DisplayStockInfoViewController: UIViewController {
                     else
                     {
                         currUser.stock[self.stockName] = (currUser.stock[self.stockName] ?? 0) - amount  // what after ?? will never happen, because we ensured that it will never be nill before, it has to be > than amount
-                        currUser.balance = NSNumber(value: currUser.balance.doubleValue + Double(amount)*self.stockPrice)
+                        currUser.investmentBalance = NSNumber(value: currUser.investmentBalance.doubleValue + Double(amount)*self.stockPrice)
                         if currUser.stock[self.stockName] == 0
                         {
                             currUser.stock.removeValue(forKey: self.stockName)  // remove that stock on hold if it's 0
@@ -443,7 +443,7 @@ class DisplayStockInfoViewController: UIViewController {
             //Update user stock and balance in database
             db.collection("users").document(currUser.username).updateData([
                 "stock": currUser.stock,
-                "balance": currUser.balance
+                "investmentBalance": currUser.investmentBalance
             ]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
