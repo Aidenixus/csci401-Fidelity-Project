@@ -63,10 +63,10 @@ class PayViewController: UIViewController, UITextViewDelegate {
     
     func showConfirmationAlert(invest: Bool) {
         payAmount = Double(amountTextField.text!)!
-        var messageToShow = "You will pay xxxxx 💲\(payAmount), and invest💲0.00 into your Fidelity account."
+        var messageToShow = "You will pay \(receivedData) 💲\(payAmount), and invest💲0.00 into your Fidelity account."
         if (invest) {
             investAmount = 0.1 * payAmount
-            messageToShow = "You will pay xxxxx 💲\(payAmount), and invest💲\(String(format:"%.02f", investAmount)) into your Fidelity account."
+            messageToShow = "You will pay \(receivedData) 💲\(payAmount), and invest💲\(String(format:"%.02f", investAmount)) into your Fidelity account."
         }
         let alert = UIAlertController(title: nil, message: messageToShow, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Discard", style: UIAlertAction.Style.destructive, handler: nil ))
