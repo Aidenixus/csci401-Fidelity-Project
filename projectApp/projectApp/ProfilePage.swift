@@ -21,8 +21,11 @@ class ProfilePage: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if(currUser.username == "TommyTrojan"){
             ProfilePic.image = UIImage(named: "TommyTrojan")
         }
-        else{
+        else if (currUser.username == "PeterMin"){
             ProfilePic.image = UIImage(named: "three")
+        }
+        else{
+            ProfilePic.image = UIImage(named: "question")
         }
         
         ProfilePic.layer.borderWidth = 1
